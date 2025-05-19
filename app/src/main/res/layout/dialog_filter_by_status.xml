@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dialogs.FilterStatusDialog">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".Fragments.FilterJobsFragment"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Filter By Status"
+            android:layout_marginBottom="15dp"
+            />
+
+        <Spinner
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:minWidth="300dp"
+            android:autofillHints="Customer Type"
+            android:textColorHint="#C6C6C6"
+            android:textColorHighlight="#ECECEC"
+            android:background="@drawable/spinner_background"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/actionholder"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:id="@+id/setFilter"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:theme="@style/FlatButtonStyle"
+                android:textColor="@color/colorPrimary"
+                android:text="Apply" />
+
+            <Button
+                android:id="@+id/cancelSetFilter"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="1"
+                android:theme="@style/FlatButtonStyle"
+                android:textColor="@color/colorPrimary"
+                android:text="Cancel" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</FrameLayout>

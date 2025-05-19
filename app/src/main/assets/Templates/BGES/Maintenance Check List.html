@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Recommendations And Maintenance Check List</title>
+    <link href="../Styles/Forms.css" rel="stylesheet" />    
+</head>
+<body>
+    <form id="TheForm">
+
+        <input type="hidden" name="FormName" value="Recommendations And Maintenance Check List" />
+        <input type="hidden" name="Created" value="" />
+        <input type="hidden" name="CreatedBy" value="" />
+        <input type="hidden" name="Updated" value="" />
+        <input type="hidden" name="UpdatedBy" value="" />
+        <input type="hidden" name="Template" value="" />
+
+        <table style="width: 70%;">
+            <tbody>
+                <tr>
+                    <td colspan="2" class="texthead"; style="text-align: center; font-weight: bold;">Recommendations & Maintenance Check List: (PPM Visits)</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Use this form to complete the recommendations & maintenance checklist parts of the job report sheet. This information will be imported into the final document automatically.
+                    </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700; width: 50%;">Customer</td>
+                    <td style="background-color: #fff7df; font-weight: 700; text-align: left; width: 50%;">Site</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fff7df;"><input id="CustomerName" name="CustomerName" type="text" /></td>
+                    <td style="background-color: #fff7df;"><input id="SiteName" name="SiteName" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="texthead"; style="font-weight: bold;">
+                        Recommendations</td>
+                </tr>
+
+                 <tr>
+                    <td colspan="2"  class="texthead" style="background-color: #eaeaea">
+                        Note recommendations here and answer the below questions. If there are none please note ‘None for this visit’  
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Are there mechanical issues that need attention?</td>
+                    <td style="text-align: left;">
+                        <select id="MechanicalIssuesNeedAttention" name="MechanicalIssuesNeedAttention">                                                       
+                            <option>Yes</option>                            
+                            <option>No</option>
+                            <option selected>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Is a BGES quotation required for remedial works?</td>
+                    <td style="text-align: left;">
+                        <select id="BGESQuoteRequired" name="BGESQuoteRequired">                                                       
+                            <option>Yes</option>                            
+                            <option>No</option>
+                            <option selected>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Does the site require an upgrade quotation (controllers/supervisor)?</td>
+                    <td style="text-align: left;">
+                        <select id="UpgradeQuote" name="UpgradeQuote">                                                       
+                            <option>Yes</option>                            
+                            <option>No</option>
+                            <option selected>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Would the site benefit from an Energy Survey?</td>
+                    <td style="text-align: left;">
+                        <select id="EnergySurvey" name="EnergySurvey">                                                       
+                            <option>Yes</option>                            
+                            <option>No</option>
+                            <option selected>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                       Would the site benefit from an ECC contract?</td>
+                    <td style="text-align: left;">
+                        <select id="ECCContract" name="ECCContract">                                                       
+                            <option>Yes</option>                            
+                            <option>No</option>
+                            <option selected>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="texthead" style="font-weight: bold;">
+                        Maintenance Check List: (PPM Visits)
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="texthead" style="background-color: #eaeaea">
+                        <b>Every Visit:</b>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        Check with the site to ascertain any key areas that need focusing on during the visit</td>
+                    <td style="text-align: left;">
+                        <select id="AscertainFocus" name="AscertainFocus">                                                       
+                            <option>Complete</option>                            
+                            <option selected>Incomplete</option>
+                            <option>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        Check Site Notes</td>
+                    <td style="text-align: left;">
+                        <select id="CheckSiteNotes" name="CheckSiteNotes">                                                       
+                            <option>Complete</option>                            
+                            <option selected>Incomplete</option>
+                            <option>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        Check previous PPM report</td>
+                    <td style="text-align: left;">
+                        <select id="CheckPreviousReport" name="CheckPreviousReport">                                                       
+                            <option>Complete</option>                            
+                            <option selected>Incomplete</option>
+                            <option>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        Check the on-site folder for PPM planner, alarms/faults, adjustments (if applicable)</td>
+                    <td style="text-align: left;">
+                        <select id="CheckFolder" name="CheckFolder">                                                       
+                            <option>Complete</option>                            
+                            <option selected>Incomplete</option>
+                            <option>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        Check network communications</td>
+                    <td style="text-align: left;">
+                        <select id="CheckNetworkCommunications" name="CheckNetworkCommunications">                                                       
+                            <option>Complete</option>                            
+                            <option selected>Incomplete</option>
+                            <option>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        Check optimised start/stop</td>
+                    <td style="text-align: left;">
+                        <select id="CheckOptimisedStartStop" name="CheckOptimisedStartStop">                                                       
+                            <option>Complete</option>                            
+                            <option selected>Incomplete</option>
+                            <option>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        Check history for recurring alarms</td>
+                    <td style="text-align: left;">
+                        <select id="CheckHistory" name="CheckHistory">                                                       
+                            <option>Complete</option>                            
+                            <option selected>Incomplete</option>
+                            <option>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        Inspect the operation and housekeeping of the main supervisor</td>
+                    <td style="text-align: left;">
+                        <select id="InspectOperation" name="InspectOperation">                                                       
+                            <option>Complete</option>                            
+                            <option selected>Incomplete</option>
+                            <option>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="texthead" style="background-color: #eaeaea">
+                        <b>Bi-Annually:</b>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        Check time clocks for accuracy throughout the system</td>
+                    <td style="text-align: left;">
+                        <select id="CheckTime" name="CheckTime">                                                       
+                            <option>Complete</option>                            
+                            <option selected>Incomplete</option>
+                            <option>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        Check controller conditions</td>
+                    <td style="text-align: left;">
+                        <select id="CheckController" name="CheckController">                                                       
+                            <option>Complete</option>                            
+                            <option selected>Incomplete</option>
+                            <option>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        Check analogue and digital inputs</td>
+                    <td style="text-align: left;">
+                        <select id="CheckInputs" name="CheckInputs">                                                       
+                            <option>Complete</option>                            
+                            <option selected>Incomplete</option>
+                            <option>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        Check analogue and digital outputs</td>
+                    <td style="text-align: left;">
+                        <select id="CheckOutputs" name="CheckOutputs">                                                       
+                            <option>Complete</option>                            
+                            <option selected>Incomplete</option>
+                            <option>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                   <td>
+                        Check operation of connected plant items</td>
+                    <td style="text-align: left;">
+                        <select id="CheckPlant" name="CheckPlant">                                                       
+                            <option>Complete</option>                            
+                            <option selected>Incomplete</option>
+                            <option>Not Applicable</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="texthead" style="background-color: #eaeaea">
+                        <b>Visit Completion:</b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Engineer Signature</td>
+                    <td style="text-align: left;">                        
+                        Site Contact Signature</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <img class="signature" id="Signature1_" alt="Sign Here" src="../../Resources/SignIcon.png" /><input type="hidden" id="Signature1" name="Signature1" value="" />
+                    </td>
+                    <td style="text-align: left;">                        
+                        <img class="signature" id="Signature2_" alt="Sign Here" src="../../Resources/SignIcon.png" /><input type="hidden" id="Signature2" name="Signature2" value="" />
+                    </td>
+                </tr>
+
+            </table>
+    </form>
+</body>
+</html>

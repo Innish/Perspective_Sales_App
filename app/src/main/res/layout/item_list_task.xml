@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingBottom="10dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/actionholder"
+    >
+
+    <CheckBox
+        android:id="@+id/done"
+        style="@style/Widget.MaterialComponents.CompoundButton.CheckBox"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="-7dp"
+        android:layout_marginTop="-3dp"
+        android:checked="false"
+        android:buttonTint="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/task_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/done"
+        android:layout_toStartOf="@+id/delete_task_button"
+        android:text="Call Tom Smith @ Infinity"
+        android:layout_marginBottom="0dp"
+        android:textAlignment="viewStart"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/task_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/task_title"
+        android:layout_alignStart="@+id/task_title"
+        android:layout_toStartOf="@+id/delete_task_button"
+        android:fontFamily="sans-serif-medium"
+        android:text="Description of the task"
+        android:textAlignment="viewStart"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/task_due_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/task_details"
+        android:layout_alignStart="@+id/task_details"
+        android:layout_marginTop="3dp"
+        android:text="1st September 2021"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="9sp" />
+
+    <ImageView
+        android:id="@+id/delete_task_button"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/ic_delete" />
+
+</RelativeLayout>

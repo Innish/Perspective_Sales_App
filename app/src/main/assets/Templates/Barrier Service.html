@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Site Survey</title>
+    <link href="../Styles/Forms.css" rel="stylesheet" />    
+    </head>
+<body>
+    <form id="TheForm">
+        <input type="hidden" name="FormName" value="Barrier Service" />
+        <input type="hidden" name="Created" value="" />
+        <input type="hidden" name="CreatedBy" value="" />
+        <input type="hidden" name="Updated" value="" />
+        <input type="hidden" name="UpdatedBy" value="" />
+        <input type="hidden" name="Template" value="" />
+
+        <table style="width: 70%;">
+            <tbody>
+                <tr>
+                    <td colspan="6" class="texthead"; style="text-align: center;">Barrier Service Checklist</td>
+                </tr>
+                <tr>
+                    <td colspan="6">Rules and Guidelines
+                        <br />
+                        <br />
+                        1. Any labels highlighted in red means they are mandatory fields and a value must be entered.</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="3">Door Location</td>
+                    <td style="background-color: #fff7df; font-weight: 700; text-align: left;" colspan="3">Asset Number</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fff7df;" colspan="3"><input id="DoorLocation" name="DoorLocation" type="text" /></td>
+                    <td style="background-color: #fff7df;" colspan="3"><input id="AssetNumber" name="AssetNumber" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="3">Door Type</td>
+                    <td style="background-color: #fff7df; font-weight: 700; text-align: left;" colspan="3">Engineer Name</td>
+                </tr>
+
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="3">
+                                                
+                        <input id="DoorType" name="DoorType" type="text" />
+
+                    <td style="background-color: #fff7df;" colspan="3"><input id="EngineerName" name="EngineerName" type="text" /></td>
+                </tr>
+                                           
+                <tr>
+                    <td colspan="6" class="texthead"; style="text-align: left">
+                        Barrier Safety and Operation</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Operates Correctly</td>
+                    <td style="width: 5%;">
+                        <input id="WorksCorrectly" name="WorksCorrectly" type="checkbox" /></td>
+                    <td style="text-align: left" colspan="3">
+                        Correct Safety for Operation of the Barrier ?</td>
+                    <td style="width: 5%;">
+                        <select id="SafetyOperationofDoor" name="SafetyOperationofDoor">                                                       
+                            <option>Yes</option>                            
+                            <option>No</option>
+                        </select>
+                    
+                </tr>
+                <tr>
+                    <td>
+                        Does Not Operate Correctly!</td>
+                    <td style="width: 5%;">
+                        <input id="WorksCorrectlyNo" name="WorksCorrectlyNo" type="checkbox" /></td>
+                    <td style="text-align: left" colspan="3">
+                        Checked Isolation Switch, Control Panel has Power, Safety Features &amp; Motor ?</td>
+                    <td style="width: 5%;">
+                        <select id="CheckedList" name="CheckedList">                                                       
+                            <option>No</option>                            
+                            <option>Yes</option>
+                        </select>
+                                        
+                <tr>
+                    <td colspan="6"  class="texthead">
+                        What's the Condition Of the Following ?</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="width: 25%;">
+                        Barrier Arm</td>
+                    <td style="width: 25%; text-align: left">
+                        Barrier Housing &amp; Catch Post</td>
+                    <td colspan="2" style="width: 25%; text-align: left">
+                        Motor</td>
+                    <td style="width: 25%; text-align: left">
+                        Barrier Skirt</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <select id="Condition1" name="Condition1">                                                       
+                            <option>Good</option>
+                            <option>Poor Recommend Replacing</option>
+                            <option>Failed Requires Replacing</option>
+                        </select></td>
+                    <td style="text-align: left">
+                        <select id="Condition2" name="Condition2">                                                       
+                            <option>Good</option>
+                            <option>Poor Recommend Replacing</option>
+                            <option>Failed Requires Replacing</option>                            
+                        </select></td>
+                    <td style="text-align: left" colspan="2">
+                        <select id="Condition3" name="Condition3">                                                       
+                            <option>Good</option>
+                            <option>Poor Recommend Replacing</option>
+                            <option>Failed Requires Replacing</option>
+                        </select></td>
+                    <td style="text-align: left">
+                        <select id="Condition4" name="Condition4">                                                       
+                            <option>Good</option>
+                            <option>Poor Recommend Replacing</option>
+                            <option>Failed Requires Replacing</option>
+                            <option>Not Applicable</option>
+                        </select></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        Force Tested</td>
+                    <td colspan="4" style="text-align: left" rowspan="2">
+                        &nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <select id="ForceTested" name="ForceTested">                                                                                   
+                            <option>Pass</option>
+                            <option>Fail</option>
+                        </select></td>
+
+                </tr>
+                                             
+                <tr>
+                    <td colspan="6" class="texthead">
+                        <strong>Defects, risks or hazards</strong></td>
+                </tr>
+
+                <tr>
+                    <td colspan="6">
+                        <textarea id="OtherPlant" name="OtherPlant" cols="20" rows="10" placeholder="Describe in detail any defects, risks or hazards..." ></textarea></td>
+                </tr>
+
+                <tr>
+                    <td colspan="6" class="texthead">
+                        <strong>Additional Notes</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="6">
+                        <textarea id="Notes" name="Notes" cols="20" rows="10" placeholder="Describe in detail any important notes not already highlighted in defects, risks or hazards section..."></textarea>
+
+                    </td>
+                </tr> 
+                
+                <tr>
+                    <td style="text-align: left" colspan="2"class="texthead";>
+                        Compliant with DHF Standards</td>
+                    <td style="text-align: left" colspan="2" class="texthead";>
+                        The barrier is in working order but requires repairs/modificaions to reduce risk of personal injury</td>
+                    <td style="text-align: left" colspan="2" class="texthead";>
+                        The barrier presents an unacceptable personal injury risk and has been set to a safe position</td>                   
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <select id="DHFStds" name="DHFStds">                            
+                            <option>Yes</option>
+                            <option>No</option> 
+                            <option>Installed before 2012</option>
+                        </select>
+                    </td>
+                    <td colspan="2">
+                        <select id="WorkingOrder" name="WorkingOrder">                            
+                            <option>Not Applicable</option>
+                            <option>Yes</option>
+                        </select></td>
+                    <td colspan="2">
+                        <select id="RiskofInjury" name="RiskofInjury">                            
+                            <option>Not Applicable</option>
+                            <option>Yes</option>
+                        </select></td>                                    
+                </tr>                
+            </table>
+    </form>
+</body>
+</html>

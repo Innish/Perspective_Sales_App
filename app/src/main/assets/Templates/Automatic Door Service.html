@@ -1,0 +1,405 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Site Survey</title>
+    <link href="../Styles/Forms.css" rel="stylesheet" />    
+    </head>
+<body>
+    <form id="TheForm">
+
+        <input type="hidden" name="FormName" value="Automatic Door Service" />
+        <input type="hidden" name="Created" value="" />
+        <input type="hidden" name="CreatedBy" value="" />
+        <input type="hidden" name="Updated" value="" />
+        <input type="hidden" name="UpdatedBy" value="" />
+        <input type="hidden" name="Template" value="" />
+
+        <table style="width: 70%;">
+            <tbody>
+                <tr>
+                    <td colspan="8" class="texthead"; style="text-align: center;">Automatic Door Service Checklist</td>
+                </tr>
+                <tr>
+                    <td colspan="8">Rules and Guidelines
+                        <br />
+                        <br />
+                        1. Any labels highlighted in red means they are mandatory fields and a value must be entered.</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="4">Door Location</td>
+                    <td style="background-color: #fff7df; font-weight: 700; text-align: left;" colspan="4">Asset Number</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fff7df;" colspan="4"><input id="DoorLocation" name="DoorLocation" type="text" /></td>
+                    <td style="background-color: #fff7df;" colspan="4"><input id="AssetNumber" name="AssetNumber" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="4">Door Type</td>
+                    <td style="background-color: #fff7df; font-weight: 700; text-align: left;" colspan="4">Engineer Name</td>
+                </tr>
+
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="4">
+                                                
+                        <select id="DoorType" name="DoorType"> 
+                            <option>Choose Type.....</option>
+                            <option>Single Slide</option>
+                            <option>Bi-Part</option>
+                            <option>Single Swing</option>
+                            <option>Double Swing</option>
+                            <option>Bi-Fold</option>
+                            <option>Curved Slider</option>
+                            <option>**Other</option>
+                        </select>
+
+                    <td style="background-color: #fff7df;" colspan="4"><input id="EngineerName" name="EngineerName" type="text" /></td>
+                </tr>
+                                           
+                <tr>
+                    <td colspan="8" class="texthead"; style="text-align: left">
+                        Activation Type</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Radar</td>
+                    <td style="width: 5%;">
+                        <input id="Radar" name="Radar" type="number" /></td>
+                    <td style="text-align: left">
+                        Push Pads</td>
+                    <td style="width: 5%;">
+                        <input id="PushPads" name="PushPads" type="number" /></td>
+                    <td style="text-align: left">
+                        Access Control</td>
+                    <td style="width: 5%;">
+                        <input id="AccessControl" name="AccessControl" type="checkbox" /></td>
+                    <td style="text-align: left">
+                        Fire Alarm</td>
+                    <td style="width: 5%;">
+                        <input id="FireAlarm" name="FireAlarm" type="checkbox" /></td>
+                </tr>
+                <tr>
+                        <td colspan="2">
+                        Other</td>
+                        <td style="text-align: left" colspan="6">
+                        <input id="OtherActivationType" name="OtherActivationType" type="text" /></td>                    
+                </tr>
+
+                <tr>
+                    <td colspan="8"  class="texthead">
+                        Opening, Closing and ***Radar Information</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        Opening Width in mm</td>
+                    <td style="text-align: left" colspan="2">
+                        Opening Time in seconds</td>
+                    <td style="text-align: left" colspan="2">
+                        Hold Open Time in seconds</td>
+                    <td style="text-align: left" colspan="2">
+                        Closing Time in seconds</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input id="OpeningWidth" name="OpeningWidth" type="number" /></td>
+                    <td style="text-align: left" colspan="2">
+                        <input id="OpeningTime" name="OpeningTime" type="number" /></td>
+                    <td style="text-align: left" colspan="2">
+                        <input id="HoldOpeningTime" name="HoldOpeningTime" type="number" /></td>
+                    <td style="text-align: left" colspan="2">
+                        <input id="ClosingTime" name="ClosingTime" type="number" /></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        ***Inner/Direction of Escape in mm</td>
+                    <td style="text-align: left" colspan="2">
+                        <input id="RadarInner" name="RadarInner" type="number" /></td>
+                    <td style="text-align: left" colspan="2">
+                        ***Outer/Opposite Direction in mm</td>
+                    <td style="text-align: left" colspan="2">
+                        <input id="RadarOuter" name="RadarOuter" type="number" /></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        Closing Dynamic Energy Forces </td>
+                    <td style="text-align: left" colspan="2">
+                        <select id="ClosingEnergyForces" name="ClosingEnergyForces">                                                       
+                            <option>Pass</option>
+                            <option>Fail</option>
+                        </select></td>                    
+                </tr>
+
+                <tr>
+                    <td colspan="8"  class="texthead">
+                        ESPE *Safety and **Presence Sensors</td>
+                </tr>
+
+                <tr>
+                    <td style="width: 25%;" colspan="2">
+                        *Closing Direction Test Box</td>
+                    <td style="text-align: left" colspan="2";>
+                        *Threshold Test Box</td>
+                    <td style="text-align: left" colspan="2";>
+                        **Overhead</td>
+                    
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <select id="ClosingDirectionBox" name="ClosingDirectionBox">                            
+                            <option>Not Applicable</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select>
+                    </td>
+                    <td colspan="2">
+                        <select id="ThresholdTestBox" name="ThresholdTestBox">                            
+                            <option>Not Applicable</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select></td>
+                    <td colspan="2">
+                        <input id="OverheadSensor" name="OverheadSensor" type="number" /></td>
+
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        *Opening Direction Test Box</td>
+                    <td colspan="2" style="text-align: left">
+                        *Slide Screens Test Box</td>
+                    <td colspan="2" style="text-align: left">
+                        **Door Mounted </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <select id="OpeningDirectionBox" name="OpeningDirectionBox">                            
+                            <option>Not Applicable</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select></td>
+                    <td colspan="2">
+                        <select id="SlideScreensTestBox" name="SlideScreensTestBox">                            
+                            <option>Not Applicable</option>
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select></td>
+                    <td colspan="2">
+                        <input id="DoorMountedSensor" name="DoorMountedSensor" type="number" /></td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        Drawing In and Crushing Protection</td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: left">
+                        Finger Guards Fitted</td>
+                    <td style="width: 8%;">
+                        <select id="FingerGuards" name="FingerGuards">                                                       
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select></td>
+                    <td style="text-align: left">
+                        Barrier Rails Fitted</td>
+                    <td style="width: 8%;">
+                        <select id="BarrierRails" name="BarrierRails">                                                       
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select></td>
+                    <td style="text-align: left">
+                        Pocket Doors Fitted</td>
+                    <td style="width: 8%;">
+                        <select id="PocketDoors" name="PocketDoors">                                                       
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select></td>
+                    
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        Sliding Door Leaf to Frame Prevention Distance in mm</td>
+                    <td>
+                        <input id="SlidingDoorDistance1" name="SlidingDoorDistance1" type="number" /></td>
+                    <td style="text-align: left" colspan="3">
+                        Sliding Door Opposing Closing Edge Prevention Distance in mm</td>
+                    <td style="width: 8%;">
+                        <input id="SlidingDoorDistance2" name="SlidingDoorDistance2" type="number" /></td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        Swing Open Door to Barrier Prevention Distance in mm</td>
+                    <td>
+                        <input id="SwingDoorDistance1" name="SwingDoorDistance1" type="number" /></td>
+                    
+                    <td style="text-align: left" colspan="3">
+                        Swing Open Door to Return Wall Prevention Distance in mm</td>
+                    <td>
+                        <input id="SwingDoorDistance2" name="SwingDoorDistance2" type="number" /></td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        Escape System</td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: left" colspan="3">
+                        Breakout Fitted</td>
+                    <td style="width: 8%;">
+                        <select id="BreakoutFitted" name="BreakoutFitted">                                                       
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select></td>
+                    
+                    
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        Force Required to Breakout in Newtons</td>
+                    <td>
+                        <input id="BreakoutForce" name="BreakoutForce" type="number" /></td>
+                    <td style="text-align: left" colspan="3">
+                        Force to Open the Door Manually After Power Failure in Newtons</td>
+                    <td style="width: 8%;">
+                        <input id="OpenDoorManuallyForce" name="OpenDoorManuallyForce" type="number" /></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Fail Safe Fitted</td>
+                    <td>
+                        <select id="FailSafeFitted" name="FailSafeFitted">                                                       
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select></td>
+                    
+                    <td style="text-align: left">
+                        Failure Type</td>
+                    <td>
+                        <select id="FailType" name="FailType">                                                       
+                            <option>Open</option>
+                            <option>Closed</option>
+                        </select></td>
+
+                    <td style="text-align: left">
+                        System Tested</td>
+                    <td>
+                        <select id="SystemTested" name="SystemTested">                                                       
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select></td>
+                    
+                    <td style="text-align: left">
+                        System Working</td>
+                    <td>
+                        <select id="SystemWorking" name="SystemWorking">                                                       
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select></td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        Signage Fitted</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Automatic Door</td>
+                    <td style="width: 5%;">
+                        <input id="Signage1" name="Signage1" type="number" /></td>
+                    <td style="text-align: left">
+                        Keep Clear</td>
+                    <td style="width: 5%;">
+                        <input id="Signage2" name="Signage2" type="number" /></td>
+                    <td style="text-align: left">
+                        Handicap</td>
+                    <td style="width: 5%;">
+                        <input id="Signage3" name="Signage3" type="number" /></td>
+                    <td style="text-align: left">
+                        Push Button to Operate</td>
+                    <td style="width: 5%;">
+                        <input id="Signage4" name="Signage4" type="number" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        Breakout Pictogram</td>
+                    <td>
+                        <input id="Signage5" name="Signage5" type="number" /></td>
+                    <td style="text-align: left">
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                    <td style="text-align: left">
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                    <td colspan="2">
+                        &nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        <strong>Defects, risks or hazards</strong></td>
+                </tr>
+
+                <tr>
+                    <td colspan="8">
+                        <textarea id="OtherPlant" name="OtherPlant" cols="20" rows="10" placeholder="Describe in detail any defects, risks or hazards..." ></textarea></td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        <strong>Additional Notes</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="8">
+                        <textarea id="Notes" name="Notes" cols="20" rows="10" placeholder="Describe in detail any important notes not already highlighted in defects, risks or hazards section..."></textarea>
+
+                    </td>
+                </tr> 
+                
+                <tr>
+                    <td style="text-align: left" colspan="2"class="texthead";>
+                        System Compliant with EN16005</td>
+                    <td style="text-align: left" colspan="3" class="texthead";>
+                        The door is in working order but requires repairs/modificaions to reduce risk of personal injury</td>
+                    <td style="text-align: left" colspan="3" class="texthead";>
+                        The door presents an unacceptable personal injury risk and has been set to a safe position</td>                   
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <select id="EN16005" name="EN16005">                            
+                            <option>Yes</option>
+                            <option>No</option> 
+                            <option>Installed before 2012</option>
+                        </select>
+                    </td>
+                    <td colspan="3">
+                        <select id="WorkingOrder" name="WorkingOrder">                            
+                            <option>Not Applicable</option>
+                            <option>Yes</option>
+                        </select></td>
+                    <td colspan="3">
+                        <select id="RiskofInjury" name="RiskofInjury">                            
+                            <option>Not Applicable</option>
+                            <option>Yes</option>
+                        </select></td>                                    
+                </tr>                
+            </table>
+    </form>
+</body>
+</html>

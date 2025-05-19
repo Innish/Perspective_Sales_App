@@ -1,0 +1,250 @@
+﻿    body {
+       font-family: Helvetica, Sans-Serif;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+    }
+
+    .m-signature-pad {
+        position: absolute;
+        font-size: 10px;
+        width: 700px;
+        height: 500px;
+        top: 50%;
+        left: 50%;
+        margin-left: -350px;
+        margin-top: -250px;
+        border: 1px solid #000000;
+        background-color: #fff;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.08) inset;
+        border-radius: 4px;
+        background-color: #ffdf7a;
+    }
+
+    .m-drawing-pad
+    {
+        position: absolute;
+        font-size: 10px;
+        width: 100%;
+        height: 100%;
+        /*top: 100px;
+        left: 100px;*/
+        /*margin-left: -530px;
+        margin-top: -300px;*/
+        background-color: #ffdf7a;
+    }
+
+.sketchpadApp {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.leftside {
+    float:left;
+    width:50px;
+    height: 600px;
+    padding:10px;
+}
+.rightside {
+    float:left;
+    margin-left:10px;
+}
+
+#sketchpad {
+    float:left;
+    height: 975px;
+    width: 1268px;
+    border:2px solid #888;
+    border-radius:4px;
+    position:relative; /* Necessary for correct mouse co-ords in Firefox */
+    margin-top: 12px;
+    background-color: #ffffff;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#clearbutton {
+    font-size: 15px;
+    padding: 10px;
+    -webkit-appearance: none;
+    background: #eee;
+    border: 1px solid #888;
+}
+
+
+    .m-signature-pad > div:first-child {
+        color: #6d6d6d;
+        text-align: center;
+        font-size: 1.6em;
+        margin-top: 1.8em;
+    }
+
+    /*.m-signature-pad:before, .m-signature-pad:after {
+        position: absolute;
+        z-index: -1;
+        content: "";
+        width: 40%;
+        height: 10px;
+        left: 20px;
+        bottom: 10px;
+        background: transparent;
+        -webkit-transform: skew(-3deg) rotate(-3deg);
+        -moz-transform: skew(-3deg) rotate(-3deg);
+        -ms-transform: skew(-3deg) rotate(-3deg);
+        -o-transform: skew(-3deg) rotate(-3deg);
+        transform: skew(-3deg) rotate(-3deg);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+    }*/
+
+    /*.m-signature-pad:after {
+        left: auto;
+        right: 20px;
+        -webkit-transform: skew(3deg) rotate(3deg);
+        -moz-transform: skew(3deg) rotate(3deg);
+        -ms-transform: skew(3deg) rotate(3deg);
+        -o-transform: skew(3deg) rotate(3deg);
+        transform: skew(3deg) rotate(3deg);
+    }*/
+
+.m-signature-pad--body {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 20px;
+    bottom: 90px;
+    border: 1px solid #f4f4f4;
+    background-color: #fff;
+}
+
+    .m-signature-pad--body canvas {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        /*border-radius: 4px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.02) inset;*/
+        border: 1px solid #696969;
+    }
+
+    .m-signature-pad--footer {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    height: 40px;
+    }
+
+        .m-signature-pad--footer .description {
+            color: #313131;
+            text-align: center;
+            font-size: 1.8em;
+            margin-top: 0.3em;
+        }
+
+    .leftside div {
+        height: 70px;
+    }
+
+        .leftside .button {
+            background-image: url('../Resources/Cancel.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-position: 0px 0px;
+            height: 60px;
+            width: 60px;
+            margin-bottom: 10px;
+            border: none;
+        }
+
+        .leftside .button.clear {
+            background-image: url('../Resources/Retry.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-position: 0px 0px;
+            height: 60px;
+            width: 60px;
+            border: none;
+        }
+
+        .leftside .button.save {
+            background-image: url('../Resources/Done.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-position: 0px 0px;
+            height: 60px;
+            width: 60px;
+            border: none;
+        }
+
+        .leftside .button.colorBlack {
+            background-image: url('../Resources/BlackPen.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-position: 0px 0px;
+            height: 60px;
+            width: 60px;
+            border: none;
+        }
+
+        .leftside .button.colorGreen {
+            right: 700px;
+            background-image: url('../Resources/GreenPen.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-position: 0px 0px;
+            height: 60px;
+            width: 60px;
+            top: -15px;
+            border: none;
+        }
+
+        .leftside .button.colorRed {
+            right: 600px;
+            background-image: url('../Resources/RedPen.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-position: 0px 0px;
+            height: 60px;
+            width: 60px;
+            top: -15px;
+            border: none;
+        }
+
+
+        .leftside .button.ThickPen {
+            right: 400px;
+            background-image: url('../Resources/ThickPen.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-position: 0px 0px;
+            height: 60px;
+            width: 60px;
+            top: -15px;
+            border: none;
+        }
+
+        .leftside .button.ThinPen {
+            right: 300px;
+            background-image: url('../Resources/ThinPen.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            background-position: 0px 0px;
+            height: 60px;
+            width: 60px;
+            top: -15px;
+            border: none;
+        }

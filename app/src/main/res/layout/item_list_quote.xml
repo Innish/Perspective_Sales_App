@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingBottom="10dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="3dp"
+        android:textAlignment="center"
+        android:paddingTop="4dp"
+        android:background="@drawable/contact_initials"
+        android:backgroundTint="#FFC6A7"
+        android:text="E"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/quote_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/status"
+        android:text="Secure Containment"
+        android:textAlignment="viewStart"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/customer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/quote_name"
+        android:layout_toEndOf="@+id/status"
+        android:layout_marginStart="14dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Umbrella Corporation"
+        android:textColor="#2C6AA1"
+        android:textAlignment="viewStart"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/quote_stage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/customer_name"
+        android:layout_toEndOf="@+id/status"
+        android:layout_marginStart="14dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="New (No Contact)"
+        android:textAlignment="viewStart"
+        android:textColor="#039BE5"
+        android:textSize="10sp" />
+
+
+</RelativeLayout>

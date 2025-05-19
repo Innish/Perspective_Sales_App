@@ -1,0 +1,510 @@
+﻿body {
+    font-family: calibri,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+    color: #333333;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-top: 1px solid #d5d5d5;
+}
+
+.MenuBar 
+{
+    height: 80px;
+    background-color: #ededed;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.MenuBar_ANDROID
+{
+    height: 60px;
+    background-color: #6d6d6d;
+    border-bottom: 1px solid #000000;
+}
+
+.SmallLogo {
+    background-image: url('../Resources/Logo_GS.png');
+    height: 60px;
+    Width: 260px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 10px;
+    position: relative;
+    margin: 0px auto;
+}
+
+.AddForm_Large {
+    background-image: url('../Resources/AddForm.png');
+    height: 40px;
+    Width: 220px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    margin: 50px auto;
+    padding-top: 280px;
+    text-align: center;
+    font-size: 24px;
+}
+
+#RecentForms {
+    margin-top: 60px;
+    background-color: #f6f6f6;
+    height: 365px;
+    padding: 40px;
+    border-radius: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#RecentForms .View {
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.RecentForm {
+    background-image: url('../Resources/FormIcon.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    text-align: center;
+    height: 80px;
+    width: 25%;
+    float: left;
+    padding-top: 280px;
+}
+
+.RecentForm.Empty {
+    opacity: 0.1;
+    filter: alpha(opacity=10);
+}
+
+.TemplateItem {
+    background-image: url('../Resources/FormIcon.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    text-align: center;
+    height: 20px;
+    width: 25%;
+    float: left;
+    padding-top: 280px;
+    margin-top: 30px;
+}
+
+.LookupPart {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    z-index: 505;
+    background-color: #FFFFFF;
+    border: 1px solid #444444;
+    -webkit-box-shadow: 2px 2px 4px #888;
+    -moz-box-shadow: 2px 2px 4px #888;
+    box-shadow: 2px 2px 4px #888;
+    /*	filter: Alpha(Opacity=90);
+	-moz-opacity: 0.9;
+	opacity: 0.9;*/
+    top: 50%;
+    left: 50%;
+    margin-top: -350px;
+    margin-left: -435px;
+    background-repeat: no-repeat;
+    color: #333333;
+    padding: 30px;
+
+}
+
+.LookupPart .Title {
+    margin-top: -30px;
+    margin-left: -30px;
+    margin-bottom: 25px;
+    padding: 10px 0px 6px 15px;
+    font-weight: bold;
+    font-family: calibri,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+    height: 25px;
+    background-color: #808080;
+    color: #FFFFFF;
+    width: 845px;
+    text-align: center;
+}
+
+.LookupPart .Categories {
+    width: 49%;
+    float: left;
+}
+
+.LookupPart .Categories select {
+    height: 30px;
+}
+
+.LookupPart .Products {
+    width: 49%;
+    float: right;
+    height: 560px;
+    overflow: auto;
+    border: 1px solid #888;
+}
+
+.LookupPart .Products .Suggestion {
+    border-bottom: 1px solid #bababa;
+    padding: 10px;
+}
+
+.LookupPart .Products .Suggestion:hover {
+    background-color: #ededed;
+}
+
+.LookupPart .ProductDetails {
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    max-height: 350px;
+    overflow: hidden;
+}
+
+.LookupPart .ProductDetails .Suggestion{
+    margin-top: 5px;
+    font-size: 8px;
+    color: #7d7d7d;
+}
+
+
+.DocumentTemplates {
+    position: absolute;
+    width: 1220px;
+    height: 800px;
+    z-index: 505;
+    background-color: #FFFFFF;
+    border: 1px solid #444444;
+    -webkit-box-shadow: 2px 2px 4px #888;
+    -moz-box-shadow: 2px 2px 4px #888;
+    box-shadow: 2px 2px 4px #888;
+    /*	filter: Alpha(Opacity=90);
+	-moz-opacity: 0.9;
+	opacity: 0.9;*/
+    top: 50%;
+    left: 50%;
+    margin-top: -390px;
+    margin-left: -640px;
+    background-repeat: no-repeat;
+    color: #333333;
+    padding: 30px;
+}
+
+.DocumentTemplates .Title {
+    margin-top: -30px;
+    margin-left: -30px;
+    margin-bottom: 25px;
+    padding: 10px 0px 6px 15px;
+    font-weight: bold;
+    font-family: calibri,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: small;
+    height: 25px;
+    background-color: #808080;
+    color: #FFFFFF;
+    width: 1265px;
+    text-align: center;
+}
+
+.DocumentTemplates .Templates {
+    border: 1px solid #f1f1f1;
+    height: 690px;
+    overflow: auto;
+}
+
+.DocumentTemplates .Buttons {
+    margin-top : 30px;
+}
+
+.DocumentTemplates .Buttons button {
+    height: 40px;
+    width: 90px;
+}
+
+.DocumentTitle {
+    margin: 0px auto;
+    font-size: 20px;
+    width: 300px;
+    height: 50px;
+    padding-top: 25px;
+    text-align: center;
+    font-family: 'Helvetica Neue';
+}
+
+.DocumentTitle_ANDROID {
+    margin: 0px auto;
+    font-size: 18px;
+    width: 300px;
+    height: 20px;
+    padding-top: 19px;
+    text-align: center;
+    font-family: 'Helvetica Neue';
+    color: #fff;
+}
+
+.Discard {
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+    color: #5c0101;
+    margin-top: 25px;
+    font-family: 'Helvetica Neue';
+}
+
+.Save {
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+    margin-right: 20px;
+    color: #004ea3;
+    margin-top: -50px;
+    font-family: 'Helvetica Neue';
+}
+
+.Discard_ANDROID {
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+    color: #414141;
+    margin-top: 12px;
+    font-family: 'Helvetica Neue';
+    border: 1px solid #707070;
+    padding: 7px 12px;
+    background-color: #ffcc00;
+    border-radius: 6px;
+    min-width: 40px;
+    text-align: center;
+}
+
+.Save_ANDROID {
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 20px;
+    color: #414141;
+    margin-top: -24px;
+    font-family: 'Helvetica Neue';
+    border: 1px solid #707070;
+    padding: 7px 12px;
+    background-color: #94ed48;
+    border-radius: 6px;
+    min-width: 40px;
+    text-align: center;
+}
+
+
+@media screen and (orientation: portrait) {
+    .Logo {
+        margin: 50% auto;
+        background-image: url('../Resources/Logo_Large.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 160px;
+        width: 300px;
+        position: relative;
+    }
+
+    .RecentForm {
+        background-image: url('../Resources/FormIcon.png');
+        background-repeat: no-repeat;
+        background-position: top center;
+        text-align: center;
+        height: 60px;
+        width: 50%;
+        float: left;
+        padding-top: 260px;
+    }
+
+    #RecentForms {
+        margin-top: 50px;
+        background-color: #f6f6f6;
+        height: 725px;
+        padding: 40px;
+        border-radius: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .DocumentTemplates {
+        position: absolute;
+        width: 895px;
+        height: 1140px;
+        z-index: 505;
+        background-color: #FFFFFF;
+        border: 1px solid #444444;
+        -webkit-box-shadow: 2px 2px 4px #888;
+        -moz-box-shadow: 2px 2px 4px #888;
+        box-shadow: 2px 2px 4px #888;
+        top: 50%;
+        left: 50%;
+        margin-top: -560px;
+        margin-left: -480px;
+        background-repeat: no-repeat;
+        color: #333333;
+        padding: 30px;
+    }
+
+    .DocumentTemplates .Title {
+        margin-top: -30px;
+        margin-left: -30px;
+        margin-bottom: 25px;
+        padding: 10px 0px 6px 15px;
+        font-weight: bold;
+        font-family: calibri,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: small;
+        height: 25px;
+        background-color: #808080;
+        color: #FFFFFF;
+        width: 940px;
+        text-align: center;
+    }
+
+    .DocumentTemplates .Templates {
+        border: 1px solid #f1f1f1;
+        height: 1025px;
+        overflow: auto;
+    }
+
+    .TemplateItem {
+        background-image: url('../Resources/FormIcon.png');
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 150px;
+        text-align: center;
+        height: 20px;
+        width: 25%;
+        float: left;
+        padding-top: 210px;
+        margin-top: 30px;
+    }
+
+    .SearchForm {
+        background-image: url('../Resources/FormIconSmall.png');
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: 40px;
+        height: 60px;
+        float: left;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        min-width: 210px;
+    }
+
+    .SearchForm div {
+        float: left;
+        margin-left: 50px;
+        text-align: left;
+        margin-top: 1px;
+    }
+}
+
+@media screen and (orientation: landscape) {
+
+    .Logo {
+        margin: 30% auto;
+        background-image: url('../Resources/Logo_Large.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 160px;
+        width: 300px;
+        position: relative;
+    }
+
+    .RecentForm {
+        background-image: url('../Resources/FormIcon.png');
+        background-repeat: no-repeat;
+        background-position: top center;
+        text-align: center;
+        height: 60px;
+        width: 25%;
+        float: left;
+        padding-top: 260px;
+    }
+
+    #RecentForms {
+        margin-top: 60px;
+        background-color: #f6f6f6;
+        height: 365px;
+        padding: 40px;
+        border-radius: 20px;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+
+    .SearchForm {
+        background-image: url('../Resources/FormIconSmall.png');
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: 40px;
+        height: 60px;
+        float: left;
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+        min-width: 210px;
+    }
+
+    .SearchForm div {
+        float: left;
+        margin-left: 50px;
+        text-align: left;
+        margin-top: 1px;
+    }
+}
+
+.Modal {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    filter: Alpha(Opacity=40);
+    -moz-opacity: 0.4;
+    opacity: 0.4;
+    background-color: #000000;
+    z-index: 0;
+}
+
+#SearchBar {
+    padding: 10px;
+    border-bottom: 1px solid #d5d5d5;
+    height: 32px;
+}
+
+#SearchBar input[type=search] {
+    padding: 6px 6px;
+    margin: 0px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 32%;
+    font-size: 14px;
+    float: left;
+}
+
+#SearchBar select {
+    margin: 0px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 32%;
+    font-size: 14px;
+    padding: 5px;
+    float: left;
+    -webkit-appearance: none;
+    background-color: white;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAJCAYAAAA/33wPAAAAvklEQVQoFY2QMQqEMBBFv7ERa/EMXkGw11K8QbDXzuN4BHv7QO6ifUgj7v4UAdlVM8Uwf+b9YZJISnlqrfEUZVlinucnBGKaJgghbiHOyLyFKIoCbdvecpyReYvo/Ma2bajrGtbaC58kCdZ1RZ7nl/4/4d5EsO/7nzl7IUtodBexMMagaRrs+06JLMvcNWmaOv2W/C/TMAyD58dxROgSmvxFFMdxoOs6lliWBXEcuzokXRbRoJRyvqqqQvye+QDMDz1D6yuj9wAAAABJRU5ErkJggg==);
+    background-position: right center;
+    background-repeat: no-repeat;
+    padding-right: 1.5em;
+}

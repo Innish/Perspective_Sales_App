@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    tools:context="uk.co.perspective.app.fragments.TaskFragment">
+
+    <FrameLayout
+        android:id="@+id/minidraw_frame"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:background="@drawable/mini_draw">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        tools:context="uk.co.perspective.app.fragments.TaskFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/filterView"
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="@drawable/searchview_background"
+            android:padding="1dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <SearchView
+                android:id="@+id/searchFor"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:iconifiedByDefault="false"
+                android:queryBackground="@android:color/transparent"
+                android:textCursorDrawable="@null"
+                app:layout_constraintEnd_toStartOf="@+id/filter_selection"
+                app:queryBackground="@android:color/transparent"
+                android:layout_marginEnd="50dp"
+                />
+
+            <ImageView
+                android:id="@+id/filter_selection"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_filter_result"
+                android:contentDescription="@string/filter_description" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/task_list"
+            android:name="uk.co.mybirdy.app.TaskFragment"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            app:layoutManager="LinearLayoutManager"
+            tools:context="uk.co.perspective.app.fragments.TaskFragment"
+            tools:listitem="@layout/item_list_task" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/task_detail_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3" />
+
+</LinearLayout>

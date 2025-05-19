@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingBottom="10dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/actionholder"
+    >
+
+    <TextView
+        android:id="@+id/activity_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="Called Adrian"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginBottom="0dp"
+        android:textAlignment="viewStart"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/activity_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/activity_title"
+        android:layout_alignStart="@+id/activity_title"
+        android:text="Description of the activity, what happened, what was said etc"
+        android:textAlignment="viewStart"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/activity_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_details"
+        android:layout_alignStart="@+id/activity_details"
+        android:text="1st September 2021"
+        android:layout_marginTop="5dp"
+        android:textAlignment="viewStart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp" />
+
+
+</RelativeLayout>

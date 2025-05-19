@@ -1,0 +1,346 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Site Survey</title>
+    <link href="../Styles/Forms.css" rel="stylesheet" />
+    </head>
+<body>
+    <form id="TheForm">
+
+        <input type="hidden" name="FormName" value="Roller Shutter Installation Survey" />
+        <input type="hidden" name="Created" value="" />
+        <input type="hidden" name="CreatedBy" value="" />
+        <input type="hidden" name="Updated" value="" />
+        <input type="hidden" name="UpdatedBy" value="" />
+        <input type="hidden" name="Template" value="" />
+
+        <table style="width: 70%;">
+            <tbody>
+                <tr>
+                    <td colspan="8" class="texthead"; style="text-align: center;">Roller Shutter Installation Survey</td>
+                </tr>
+                <tr>
+                    <td colspan="8">Rules and Guidelines
+                        <br />
+                        <br />
+                        1. A double asterisk means enter further details in the notes section of this form. Examples **Other in Fixing Material or <strong>**Not Listed</strong> in Extras.<br />
+                        2. All dimensions are viewed from inside unless stated.<br />
+                        3. Any labels highlighted in red means they are mandatory fields and a value must be entered.</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="4">Door Location</td>
+                    <td style="background-color: #fff7df; font-weight: 700; text-align: left;" colspan="4">Asset Number</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fff7df;" colspan="4"><input id="DoorLocation" name="DoorLocation" type="text" /></td>
+                    <td style="background-color: #fff7df;" colspan="4"><input id="AssetNumber" name="AssetNumber" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="4">Door Type</td>
+                    <td style="background-color: #fff7df; font-weight: 700; text-align: left;" colspan="4">Engineer Name</td>
+                </tr>
+
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="4"><input id="DoorType" name="DoorType" type="text" /></td>
+                    <td style="background-color: #fff7df;" colspan="4"><input id="EngineerName" name="EngineerName" type="text" /></td>
+                </tr>
+                                <tr>
+                    <td colspan="8" class="texthead"; style="text-align: center;">
+                        Fixing Type and Track</td>
+                </tr>
+
+                <tr>
+                    <td colspan="8">
+                        
+                        <input type="hidden" id="ImageOption_FixingTypeA" name="ImageOption_FixingTypeA" value="" />
+                        <input type="hidden" id="ImageOption_FixingTypeB" name="ImageOption_FixingTypeB" value="" />
+                        <input type="hidden" id="ImageOption_TrackType" name="ImageOption_TrackType" value="" />
+
+                        <table style="background-color: #fff;">
+                            <tr>
+                                <td style="text-align: center;">
+                                    <img src="Images/FixingA.png" id="FixingA" class="ImageOption" optionGroup="ImageOption_FixingTypeA" style="height: 110px;" />
+                                </td>
+                                <td>
+                                    <img src="Images/FixingB.png" id="FixingB" class="ImageOption" optionGroup="ImageOption_FixingTypeA" style="height: 110px;"/>
+                                </td>
+                                <td>
+                                    <img src="Images/FixingC.png" id="FixingC" class="ImageOption" optionGroup="ImageOption_FixingTypeA" style="height: 110px;"/>
+                                </td>
+                                <td  style="text-align: center;">
+                                    <img src="Images/FixingD.png" id="FixingD" class="ImageOption" optionGroup="ImageOption_FixingTypeA" style="height: 110px;"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">
+                                    <img src="Images/RollerA.png" id="RollerA" class="ImageOption" optionGroup="ImageOption_TrackType" style="height: 110px;"/></td>
+                                <td>
+                                    <img src="Images/RollerB.png" id="RollerB" class="ImageOption" optionGroup="ImageOption_TrackType" style="height: 110px;"/></td>
+                                <td>
+                                    <img src="Images/RollerC.png" id="RollerC" class="ImageOption" optionGroup="ImageOption_TrackType" style="height: 110px;"/></td>
+                                <td style="text-align: center;">
+                                    <img src="Images/RollerD.png" id="RollerD" class="ImageOption" optionGroup="ImageOption_TrackType" style="height: 110px;"/></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="8" class="texthead"; style="text-align: center;">
+                        Fixing Dimensions</td>
+                </tr>
+                <tr>
+                    <td colspan="8">
+                        <div style="background-image: url('Images/DoorFrameRollerShutter.png'); background-repeat:no-repeat; background-size: contain; background-position:center; width:800px; height: 590px; margin: 0px auto;">
+
+                            <input id="Headroom" name="Headroom" type="text" style="position: relative; top: 80px; left: 249px; height: 19px; padding: 2px; width: 98px; text-align: center" />                            
+                            <input id="Width" name="Width" type="text" style="position: relative; top: 260px; left: 267px; height: 19px; padding: 2px; width: 98px; text-align: center" />
+                            <input id="Height" name="Height" type="text" style="position: relative; top: 357px; left: 117px; height: 19px; padding: 2px; width: 98px; text-align: center" />
+                            <input id="SideRoomLeft" name="SideRoomLeft" type="text" style="position: relative; top: 412px; left: -243px; height: 19px; padding: 2px; width: 98px; text-align: center" />
+                            <input id="SideRoomRight" name="SideRoomRight" type="text" style="position: relative; top: 411px; left: 230px; height: 19px; padding: 2px; width: 97px; text-align: center" />
+                        </div>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="8"  class="texthead">
+                        Additional Roller Shutter Information</td>
+                </tr>
+
+                <tr>
+                    <td style="width: 25%;" colspan="2">
+                        Motor Type</td>
+                    <td style="width: 25%;" colspan="2"; style="text-align: left">
+                        Operation Type</td>
+                    <td style="width: 25%;" colspan="2"; style="text-align: left">
+                        Operation Side</td>
+                    <td style="width: 25%;" colspan="2"; style="text-align: left">
+                        &nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <select id="MotorType" name="MotorType">                            
+                           <option>Tube Op Steel</option>
+                           <option>3ph Direct Drive</option>
+                            <option>3ph Chain Drive</option>
+                            <option>3ph Cog Drive</option>
+                            <option>Manual</option>
+                            <option>Manual</option>
+                            <option>**Other</option>
+                        </select>
+                    </td>
+                    <td colspan="2">
+                        <select id="OperationType" name="OperationType">
+                            <option>Rocker Switch</option>
+                                <option>Keyswitch</option>
+                                <option>Dead Man</option>
+                                <option>Fully Auto</option>
+                                <option>Chain Op</option>
+                                <option>Push Up</option>                            
+                        </select></td>
+                    <td colspan="2">
+                        <select id="OperationSide" name="OperationSide">
+                            <option>Choose one.....</option>
+                            <option>Left</option>
+                            <option>Right</option>
+                        </select></td>
+                    <td colspan="2">
+                        &nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        Door Colour</td>
+                    <td colspan="2"; style="text-align: left">
+                        Custom RAL Code</td>
+                    <td colspan="2"; style="text-align: left">
+                        Fixing Material</td>
+                    <td colspan="2"; style="text-align: left">
+                        &nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <select id="DoorColour" name="DoorColour">
+                            <option>Choose Colour.....</option>
+                            <option>Galvanised</option>
+                            <option>Custom RAL Cod</option>
+                        </select>
+                    </td>
+                    <td colspan="2">
+                        <input id="CustomRAL" name="CustomRAL" type="text" /></td>
+                    <td colspan="2">
+                        <select id="FixingMaterial" name="FixingMaterial">                            
+                            <option>Steel</option>
+                            <option>Wood</option>
+                            <option>Brick</option>
+                            <option>**Other</option>
+                        </select></td>
+                    <td colspan="2">
+                        &nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        Lath Type</td>
+                    <td colspan="2" style="text-align: left">
+                        Guide Type</td>
+                    <td colspan="2" style="text-align: left">
+                        Full Canopy</td>
+                    <td colspan="2" style="text-align: left">
+                        Back Canopy/Fascia Required</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <select id="LathType" name="LathType">                            
+                            <option>Standard</option>
+                            <option>Insulated</option>
+                            <option>Perforated</option>
+                            <option>Brickbond</option>
+                        </select></td>
+                    <td colspan="2">
+                        <select id="GuideType" name="GuideType">                            
+                            <option>65mm standard</option>
+                            <option>65mm windlocked</option>
+                            <option>100mm standard</option>
+                            <option>100mm windlocked</option>
+                        </select></td>
+                    <td colspan="2">
+                        <select id="FullCanopy" name="FullCanopy">                            
+                            <option>No</option>
+                            <option>Yes (See Notes)</option>
+                        </select></td>
+                    <td colspan="2" style="text-align: left">
+                        <select id="BackCanopy" name="BackCanopy">                            
+                            <option>No</option>
+                            <option>**Yes</option>                                                        
+                        </select></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        Number Of Engineers</td>
+                    <td colspan="2" style="text-align: left">
+                        Labour Time (Hours)</td>
+                    <td colspan="2" style="text-align: left">
+                        Plant Needed</td>
+                    <td colspan="2" style="text-align: left">
+                        MEWP Required</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input id="NumberOfEngineers" name="NumberOfEngineers" type="text" /></td>
+                    <td colspan="2">
+                        <input id="LabourTime" name="LabourTime" type="text" /></td>
+                    <td colspan="2">
+                        <select id="PlantNeeded" name="PlantNeeded">                            
+                            <option>No</option>
+                            <option>Yes</option>
+                        </select></td>
+                    <td colspan="2">
+                        <select id="MEWPRequired" name="MEWPRequired">                            
+                            <option>No</option>
+                            <option>Yes</option>
+                            <option>8m Battery Scissor Lift - JLG2630ES, LCap - 230Kg, PWidth - 0.76m</option>
+                            <option>8m Battery Scissor Lift - JLG2646ES, LCap - 450Kg, PWidth - 1.17m</option>
+                            <option>6m Battery Scissor Lift - JLG6RS, LCap - 230Kg, PWidth - 0.81m</option>
+                            <option>8m Diesel Scissor Lift - Genie GS2668RT, LCap - 567Kg, PWidth - 1.55m</option>
+                            <option>8m Diesel Scissor Lift - Skyjack SJ6826RT, LCap - 567Kg, PWidth - 1.76m</option>
+                            <option>**Other</option>                            
+                        </select></td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        Extras</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Activation Sensor</td>
+                    <td style="width: 5%;">
+                        <input id="Extras1" name="Extras1" type="number" /></td>
+                    <td style="text-align: left">
+                        Induction Loop</td>
+                    <td style="width: 5%;">
+                        <input id="Extras4" name="Extras4" type="number" /></td>
+                    <td style="text-align: left">
+                        Remote Control</td>
+                    <td style="width: 5%;">
+                        <input id="Extras7" name="Extras7" type="number" /></td>
+                    <td style="text-align: left">
+                        Additional Photocell</td>
+                    <td style="width: 5%;">
+                        <input id="Extras10" name="Extras10" type="number" /></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Traffic Lights </td>
+                    <td>
+                        <input id="Extras2" name="Extras2" type="number" /></td>
+                    <td style="text-align: left">
+                        Ground Bolt Interlock Kit </td>
+                    <td>
+                        <input id="Extras5" name="Extras5" type="number" /></td>
+                    <td style="text-align: left">
+                        Pin Locks</td>
+                    <td>
+                        <input id="Extras8" name="Extras8" type="number" /></td>
+                    <td style="text-align: left">
+                        Bottom Rail Lock </td>
+                    <td>
+                        <input id="Extras11" name="Extras11" type="number" /></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: left">
+                        <select id="Seals" name="Seals">                            
+                            <option>No Seal</option>
+                            <option>Bottom Rail Seal</option>
+                            <option>Guide Brush Seal</option>
+                            <option>**Soffit Seal</option>
+                        </select></td>
+                    <td>
+                        <input id="Extras3" name="Extras3" type="number" /></td>
+                    <td style="text-align: left">
+                        <strong>**Not Listed</strong></td>
+                    <td>
+                        <input id="Extras12" name="Extras12" type="number" /></td>
+                    <td>
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                    <td colspan="2">
+                        &nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        <strong>Other Plant Required</strong></td>
+                </tr>
+
+                <tr>
+                    <td colspan="8">
+                        <textarea id="OtherPlant" cols="20" name="OtherPlant" rows="10" placeholder="Describe in detail the plant required, but only if plant pull down menu equals Yes..." ></textarea></td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        <strong>Notes</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="8">
+                        <textarea id="Notes" cols="20" name="Notes" rows="10" placeholder="Describe in detail any important notes or extras required that are not already listed in the extras section..."></textarea>
+
+                    </td>
+                </tr>
+            </table>
+
+    </form>
+</body>
+</html>

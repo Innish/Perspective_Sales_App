@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Site Survey</title>
+    <link href="../Styles/Forms.css" rel="stylesheet" />    
+    </head>
+<body>
+    <form id="TheForm">
+
+        <input type="hidden" name="FormName" value="Manual Steel Door Installation and Repair Survey" />
+        <input type="hidden" name="Created" value="" />
+        <input type="hidden" name="CreatedBy" value="" />
+        <input type="hidden" name="Updated" value="" />
+        <input type="hidden" name="UpdatedBy" value="" />
+        <input type="hidden" name="Template" value="" />
+
+        <table style="width: 70%;">
+            <tbody>
+                <tr>
+                    <td colspan="8" class="texthead"; style="text-align: center;">Manual Steel Door Installation and Repair Survey</td>
+                </tr>
+                <tr>
+                    <td colspan="8">Rules and Guidelines
+                        <br />
+                        <br />
+                        1. A double asterisk means enter further details in the notes section. Examples **Yes in Plant Needed or any selected item in Replace/Repair Section.<br />
+                        2. All dimensions are viewed from inside unless stated.<br />
+                        3. Any labels highlighted in red means they are mandatory fields and a value must be entered.</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="4">Door Location</td>
+                    <td style="background-color: #fff7df; font-weight: 700; text-align: left;" colspan="4">Asset Number</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fff7df;" colspan="4"><input id="DoorLocation" name="DoorLocation" type="text" /></td>
+                    <td style="background-color: #fff7df;" colspan="4"><input id="AssetNumber" name="AssetNumber" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="4">Door Type</td>
+                    <td style="background-color: #fff7df; font-weight: 700; text-align: left;" colspan="4">Engineer Name</td>
+                </tr>
+
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="4">
+                                                
+                        <select id="DoorType" name="DoorType"> 
+                            <option>Choose Type.....</option>
+                            <option>Single</option>                            
+                            <option>Double</option>
+                            <option>Leaf and a half</option>  
+                        </select>
+
+                    <td style="background-color: #fff7df;" colspan="4"><input id="EngineerName" name="EngineerName" type="text" /></td>
+                </tr>
+                                <tr>
+                    <td colspan="8" class="texthead";>
+                        Manual Steel Door Handing
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" >
+                        
+                        <input type="hidden" id="ImageOption_FixingTypeA" name="ImageOption_FixingTypeA" value="" />
+                        <input type="hidden" id="ImageOption_FixingTypeB" name="ImageOption_FixingTypeB" value="" />   
+                        <input type="hidden" id="ImageOption_FixingTypeC" name="ImageOption_FixingTypeC" value="" /> 
+
+                        <table style="background-color: #fff; width: 80%">
+                            <tr>
+                                <td style="text-align: center;">
+                                    <img src="Images/SteelSetDoorA1.png" id="SteelSetDoorA1" class="ImageOption" optionGroup="ImageOption_FixingTypeA" style="height: 150px;" />
+                                </td>
+                                <td>
+                                    <img src="Images/SteelSetDoorA2.png" id="SteelSetDoorA2" class="ImageOption" optionGroup="ImageOption_FixingTypeA" style="height: 150px;"/>
+                                </td>
+                                <td>
+                                    <img src="Images/SteelSetDoorA3.png" id="SteelSetDoorA3" class="ImageOption" optionGroup="ImageOption_FixingTypeA" style="height: 150px;"/>
+                                </td> 
+                                <td>
+                                    <img src="Images/SteelSetDoorA4.png" id="SteelSetDoorA4" class="ImageOption" optionGroup="ImageOption_FixingTypeA" style="height: 150px;"/>
+                                </td> 
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">
+                                    <img src="Images/SteelSetDoorB1.png" id="SteelSetDoorB1" class="ImageOption" optionGroup="ImageOption_FixingTypeB" style="height: 150px;"/></td>
+                                <td>
+                                    <img src="Images/SteelSetDoorB2.png" id="SteelSetDoorB2" class="ImageOption" optionGroup="ImageOption_FixingTypeB" style="height: 150px;"/></td> 
+                                <td>
+                                    <img src="Images/SteelSetDoorB3.png" id="SteelSetDoorB3" class="ImageOption" optionGroup="ImageOption_FixingTypeB" style="height: 150px;"/></td> 
+                                <td>
+                                    <img src="Images/SteelSetDoorB4.png" id="SteelSetDoorB4" class="ImageOption" optionGroup="ImageOption_FixingTypeB" style="height: 150px;"/></td> 
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">
+                                    <img src="Images/SteelSetDoorC1.png" id="SteelSetDoorC1" class="ImageOption" optionGroup="ImageOption_FixingTypeC" style="height: 150px;"/></td>
+                                <td>
+                                    <img src="Images/SteelSetDoorC2.png" id="SteelSetDoorC2" class="ImageOption" optionGroup="ImageOption_FixingTypeC" style="height: 150px;"/></td> 
+                                <td>
+                                    <img src="Images/SteelSetDoorC3.png" id="SteelSetDoorC3" class="ImageOption" optionGroup="ImageOption_FixingTypeC" style="height: 150px;"/></td> 
+                                <td>
+                                    <img src="Images/SteelSetDoorC4.png" id="SteelSetDoorC4" class="ImageOption" optionGroup="ImageOption_FixingTypeC" style="height: 150px;"/></td> 
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="8" class="texthead"; style="text-align: center">
+                        Fixing Dimensions</td>
+                </tr>
+                <tr>
+                    <td colspan="8">
+                        <div style="background-image: url('Images/DoorFrameAutomaticandManual.png'); background-repeat:no-repeat; background-size: contain; background-position:center; width:900px; height: 590px; margin: 0px auto;">
+
+                            <input id="Headroom" name="Headroom" type="text" style="position: relative; top: 80px; left: 249px; height: 19px; padding: 2px; width: 98px; text-align: center" />
+                            <input id="Clearance" name="Clearance" type="text" style="position: relative; top: 174px; left: -36px; height: 19px; padding: 2px; width: 98px; text-align: center" />
+                            <input id="Width" name="Width" type="text" style="position: relative; top: 260px; left: 167px; height: 19px; padding: 2px; width: 98px; text-align: center" />
+                            <input id="Height" name="Height" type="text" style="position: relative; top: 357px; left: 17px; height: 19px; padding: 2px; width: 98px; text-align: center" />
+                            <input id="SideRoomLeft" name="SideRoomLeft" type="text" style="position: relative; top: 412px; left: -343px; height: 19px; padding: 2px; width: 98px; text-align: center" />
+                            <input id="SideRoomRight" name="SideRoomRight" type="text" style="position: relative; top: 411px; left: 130px; height: 19px; padding: 2px; width: 97px; text-align: center" />
+                        </div>
+
+                    </td>
+                </tr>
+
+                 <tr>
+                    <td colspan="8"  class="texthead">
+                        Manual Steel Door Information</td>
+                </tr>
+
+                <tr>
+                    <td style="width: 25%;" colspan="2">
+                        Door Colour</td>
+                    <td style="width: 25%; text-align: left" colspan="2">
+                        RAL Code</td>
+                    <td style="width: 25%; text-align: left" colspan="2">
+                        Locking Options</td>
+                    <td style="width: 25%; text-align: left" colspan="2">
+                        Outside Access Panel (Panic Furniture Only)</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <select id="DoorColour" name="DoorColour">
+                             <option>Choose Option.......</option>
+                            <option>Standard SDG Colour </option>
+                            <option>Non Standard RAL Colour</option>
+                            <option>RAL Code</option>                            
+                        </select></td>
+                    <td colspan="2">
+                        <input id="RALCode" name="RALCode" type="text" /></td>
+                    
+                    <td colspan="2">
+                        <select id="LockingOptions" name="LockingOptions">
+                             <option>Choose Option.......</option>
+                            <option>Sashlock and lever handles </option>
+                            <option>14 Point Locking System</option>
+                            <option>Single Point Panic</option>
+                            <option>2 Point Panic</option>
+                            <option>3 Point Panic</option>
+                            <option>Magnetic Lock</option>
+                        </select></td>
+
+                    <td colspan="2">
+                        <select id="OutsideAccessPanel" name="OutsideAccessPanel">
+                             <option>None</option>
+                            <option>Knob</option>
+                            <option>Lever</option>
+                            <option>Keypad</option>                            
+                        </select></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        Number Of Engineers</td>
+                    <td colspan="2" style="text-align: left">
+                        Labour Time (Hours)</td>
+                    <td colspan="2" style="text-align: left">
+                        Plant Needed</td>
+                    <td colspan="2" style="text-align: left">
+                        Fire Rated</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input id="NumberOfEngineers" name="NumberOfEngineers" type="text" /></td>
+                    <td colspan="2">
+                        <input id="LabourTime" name="LabourTime" type="text" /></td>
+                    <td colspan="2">
+                        <select id="PlantNeeded" name="PlantNeeded">                            
+                            <option>No</option>
+                            <option>**Yes</option>
+                        </select></td>
+                    <td colspan="2">
+                        <select id="FireRated" name="FireRated">
+                             <option>Yes</option>
+                            <option>No</option>
+                        </select></td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        **Manual Steel Door Repairs/Replacements/Installation Items </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Additional Upper Half Lock</td>
+                    <td style="width: 5%;">
+                        <input id="Extras1" name="Extras1" type="number" /></td>
+                    <td style="text-align: left">
+                        Additional Lower Half Lock</td>
+                    <td style="width: 5%;">
+                        <input id="Extras4" name="Extras4" type="number" /></td>
+                    <td style="text-align: left">
+                        U Channel Cloaking Frame</td>
+                    <td style="width: 5%;">
+                        <input id="Extras7" name="Extras7" type="number" /></td>
+                    <td style="text-align: left">
+                        Pull Handle Single</td>
+                    <td style="width: 5%;">
+                        <input id="Extras10" name="Extras10" type="number" /></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Pull Handle Pair</td>
+                    <td>
+                        <input id="Extras2" name="Extras2" type="number" /></td>
+                    <td style="text-align: left">
+                        Push Plate</td>
+                    <td>
+                        <input id="Extras5" name="Extras5" type="number" /></td>
+                    <td style="text-align: left">
+                        External Door Closer</td>
+                    <td>
+                        <input id="Extras8" name="Extras8" type="number" /></td>
+                    <td style="text-align: left">
+                        Limit Stay</td>
+                    <td>
+                        <input id="Extras11" name="Extras11" type="number" /></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Kick Plate</td>
+                    <td>
+                        <input id="Extras3" name="Extras3" type="number" /></td>
+                    <td style="text-align: left">
+                        Spy Viewer</td>
+                    <td>
+                        <input id="Extras6" name="Extras6" type="number" /></td>
+                    <td style="text-align: left">
+                        Vision Panels</td>
+                    <td>
+                        <input id="Extras9" name="Extras9" type="number" /></td>
+                    <td style="text-align: left">
+                        Louvered Panels</td>
+                    <td>
+                        <input id="Extras12" name="Extras12" type="number" /></td>
+                </tr>
+               
+
+                <tr>
+                    <td>
+                        Additional Top or Side Panels</td>
+                    <td>
+                        <input id="Extras13" name="Extras13" type="number" /></td>
+                    <td style="text-align: left">
+                        Access Control</td>
+                    <td>
+                        <input id="Extras14" name="Extras14" type="number" /></td>
+                    <td style="text-align: left">
+                        Replacement Lock</td>
+                    <td>
+                        <input id="Extras15" name="Extras15" type="number" /></td>
+                    <td style="text-align: left">
+                        Replacement Furniture</td>
+                    <td>
+                        <input id="Extras16" name="Extras16" type="number" /></td>
+                </tr>
+               
+
+                <tr>
+                    <td>
+                        Replacement Hinges</td>
+                    <td>
+                        <input id="Extras17" name="Extras17" type="number" /></td>
+                    <td style="text-align: left">
+                        Not Listed</td>
+                    <td>
+                        <input id="Extras18" name="Extras18" type="number" /></td>
+                    <td style="text-align: left">
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                    <td style="text-align: left">
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+               
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        <strong>Other Plant Required</strong></td>
+                </tr>
+
+                <tr>
+                    <td colspan="8">
+                        <textarea id="OtherPlant" cols="20" name="OtherPlant" rows="10" placeholder="Describe in detail the plant required, but only if plant pull down menu equals Yes..." ></textarea></td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        <strong>Notes</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="8">
+                        <textarea id="Notes" cols="20" name="Notes" rows="10" placeholder="Describe in detail any important notes or extras required that are not already listed in the extras section..."></textarea>
+
+                    </td>
+                </tr>
+            </table>
+
+    </form>
+</body>
+</html>

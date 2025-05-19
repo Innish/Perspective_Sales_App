@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingBottom="10dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/initials"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:text="IS"
+        android:textAlignment="center"
+        android:paddingTop="6dp"
+        android:background="@drawable/contact_initials"
+        android:backgroundTint="#039BE5"
+        android:textColor="#fff"
+        android:textSize="12sp"/>
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/initials"
+        android:text="Innish Seeds"
+        android:layout_marginTop="0dp"
+        android:textAlignment="viewStart"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/job_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_below="@+id/contact_name"
+        android:layout_alignStart="@+id/contact_name"
+        android:fontFamily="sans-serif-medium"
+        android:text="Software Developer"
+        android:textAlignment="viewStart"
+        android:textSize="10sp" />
+
+
+</RelativeLayout>

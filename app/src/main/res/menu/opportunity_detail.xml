@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Won"
+        android:id="@+id/action_won"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_won"
+        />
+
+    <item android:title="Lost"
+        android:id="@+id/action_lost"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_lost"
+        />
+
+    <item android:title="Save"
+        android:id="@+id/action_save"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_save_white"
+        />
+
+    <item android:title="Archive"
+        android:id="@+id/action_archive"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_archive_white"
+        />
+
+    <item android:title="Activity"
+        android:id="@+id/action_activity"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_time_white"
+        />
+</menu>

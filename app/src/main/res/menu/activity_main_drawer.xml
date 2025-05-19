@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_customers"
+            android:icon="@drawable/ic_menu_customer"
+            android:title="@string/menu_customers" />
+        <item
+            android:id="@+id/nav_leads"
+            android:icon="@drawable/ic_menu_leads"
+            android:title="@string/menu_leads" />
+
+        <item
+            android:id="@+id/nav_opportunites"
+            android:icon="@drawable/ic_menu_opportunity"
+            android:title="@string/menu_opportunities" />
+
+        <item
+            android:id="@+id/nav_quotes"
+            android:icon="@drawable/ic_menu_quotes"
+            android:title="@string/menu_quotes"
+            android:iconTint="#FFF"/>
+
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@drawable/ic_orders"
+            android:title="@string/orders"
+            android:iconTint="#FFF"/>
+
+        <item
+            android:id="@+id/nav_projects"
+            android:icon="@drawable/ic_menu_project"
+            android:title="@string/menu_projects" />
+
+        <item
+            android:id="@+id/nav_tasks"
+            android:icon="@drawable/ic_menu_tasks"
+            android:title="@string/menu_tasks" />
+    </group>
+</menu>

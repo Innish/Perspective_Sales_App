@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingBottom="10dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp">
+
+    <TextView
+        android:id="@+id/initials"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="PS"
+        android:textAlignment="center"
+        android:paddingTop="8dp"
+        android:background="@drawable/contact_initials"
+        android:backgroundTint="#FFD4D4"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/customer_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="14dp"
+        android:layout_toEndOf="@+id/initials"
+        android:text="Perspective Software"
+        android:textColor="@color/list_text_color"
+        android:layout_marginTop="5dp"
+        android:textAlignment="viewStart"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/contact_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/customer_name"
+        android:layout_alignStart="@+id/customer_name"
+        android:fontFamily="sans-serif-medium"
+        android:text="Gordon Wright"
+        android:textColor="@color/list_text_color"
+        android:textAlignment="viewStart"
+        android:textSize="10sp" />
+
+
+</RelativeLayout>

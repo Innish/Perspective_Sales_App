@@ -1,0 +1,108 @@
+<project version="4">
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable-night/text_input_background.xml" value="0.5703125" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable-v24/actionholder.xml" value="0.5703125" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable-v24/actionholder_archived.xml" value="0.5435" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable-v24/actionholder_flat_archived.xml" value="0.5703125" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable-v24/calculated_list_background.xml" value="0.5435" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable-v24/calculated_list_background_required.xml" value="0.5435" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable-v24/calculated_list_summary_background.xml" value="0.5435" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable-v24/label_background.xml" value="0.5703125" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable-v24/report_value_background.xml" value="0.5708333333333333" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable-v24/speech_bubble.xml" value="0.5703125" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable-v24/text_input_background_required.xml" value="0.5708333333333333" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable-v24/total_alternative_background.xml" value="0.5703125" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable-v24/total_alternative_background_land.xml" value="0.4515625" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable-v24/total_alternative_background_land_left.xml" value="0.5435" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable-v24/total_alternative_background_land_right.xml" value="0.4515625" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable-v24/total_background.xml" value="0.5703125" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable/rounded_shape.xml" value="0.5435" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable/speech_bubble.xml" value="0.5703125" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable/splash.xml" value="0.5703125" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/drawable/tab_background.xml" value="0.5708333333333333" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/layout-land/activity_login.xml" value="0.5" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/layout-land/fragment_home.xml" value="0.625" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/layout-land/fragment_project_properties.xml" value="0.27472089314194575" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/layout-land/fragment_quote_detail.xml" value="0.5119549929676512" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/layout/activity_login.xml" value="0.3203125" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/layout/activity_main.xml" value="0.4189102564102564" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/layout/app_bar_main.xml" value="0.4189102564102564" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/layout/dialog_duplicate_quote.xml" value="0.5546875" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/layout/dialog_edit_contact.xml" value="0.5546875" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/layout/dialog_new_quote.xml" value="0.55" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/layout/fragment_home.xml" value="0.45" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/layout/fragment_project_detail.xml" value="0.35885416666666664" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/layout/fragment_project_properties.xml" value="0.35885416666666664" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/layout/fragment_quote_detail.xml" value="0.5013309671694764" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/layout/item_list_quote_line.xml" value="0.75" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/menu/customer_detail.xml" value="0.35885416666666664" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/menu/project_detail.xml" value="0.35885416666666664" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/menu/project_properties.xml" value="0.2833333333333333" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/menu/quote_detail.xml" value="0.2833333333333333" />
+        <entry key="..\:/Projects/Android/MyBirdy/app/src/main/res/menu/task_detail.xml" value="0.51953125" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/drawable-night/customer_details_background.xml" value="0.3115" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/drawable-night/expandsearchholder.xml" value="0.3015" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/drawable-night/infopanelholder.xml" value="0.531" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/drawable-night/mini_draw.xml" value="0.531" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/drawable-v24/customer_details_background.xml" value="0.3115" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/drawable-v24/expandsearchholder.xml" value="0.3015" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/drawable-v24/infopanelholder.xml" value="0.531" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/drawable/ic_convert.xml" value="0.269" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/drawable/mini_draw.xml" value="0.531" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/drawable/rounded_shape.xml" value="0.5435" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/drawable/splash.xml" value="0.531" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout-land/activity_login.xml" value="0.16257861635220125" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout-land/fragment_home.xml" value="0.67" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout-land/fragment_order_detail.xml" value="0.3320754716981132" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout-land/fragment_orders.xml" value="0.3320754716981132" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/activity_host.xml" value="0.25244140625" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/activity_login.xml" value="0.25244140625" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/activity_main.xml" value="0.5" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/activity_settings.xml" value="0.25244140625" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/app_bar_main.xml" value="0.25244140625" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/content_main.xml" value="0.25244140625" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/dialog_convert_quote.xml" value="0.47695202257761055" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/dialog_duplicate_order.xml" value="0.5" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/dialog_edit_order_line.xml" value="0.4514749893116717" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/dialog_filter_orders.xml" value="0.4477564102564103" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/dialog_new_order.xml" value="0.4477564102564103" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/dialog_new_order_line.xml" value="0.4514749893116717" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/fragment_blank.xml" value="0.25244140625" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/fragment_home.xml" value="0.44711538461538464" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/fragment_opportunity_detail.xml" value="0.25309961522017954" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/fragment_order_detail.xml" value="0.4575402635431918" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/fragment_orders.xml" value="0.44711538461538464" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/item_list_add.xml" value="0.4282051282051282" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/item_list_expand_search.xml" value="0.67" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/item_list_file.xml" value="0.18359375" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/item_list_lead.xml" value="0.5" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/item_list_order.xml" value="0.5" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/layout/nav_header_main.xml" value="0.25244140625" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/menu/activity_main_drawer.xml" value="0.9" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/menu/customer_detail.xml" value="0.25244140625" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/menu/global.xml" value="0.25244140625" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/menu/lead_detail.xml" value="0.25244140625" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/menu/main.xml" value="0.25244140625" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/menu/opportunity_detail.xml" value="0.25244140625" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/menu/order_detail.xml" value="0.515625" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/menu/project_detail.xml" value="0.25244140625" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/menu/project_properties.xml" value="0.18896484375" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/menu/quote_detail.xml" value="0.33" />
+        <entry key="..\:/Projects/Android/Perspective/app/src/main/res/menu/task_detail.xml" value="0.18896484375" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="jbr-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

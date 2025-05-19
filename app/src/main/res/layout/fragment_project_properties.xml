@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:divider="?android:attr/dividerHorizontal"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    tools:context="uk.co.perspective.app.fragments.ProjectPropertiesFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:fitsSystemWindows="true"
+        tools:context=".fragments.ProjectPropertiesFragment"
+        tools:ignore="MergeRootFrame">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:tabPaddingEnd="2dp"
+            app:tabPaddingStart="2dp"
+            app:tabInlineLabel="true"
+            style="@style/CustomTabLayout"
+            app:tabIconTint="@color/selected_tab_color"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/pager"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".fragments.ProjectPropertiesFragment" />
+        
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/activity_list_container"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:showDividers="middle"
+        android:background="@drawable/home_screen_vertical_divider"
+        android:layout_gravity="end"
+        android:layout_marginRight="-300dp"
+        tools:context="uk.co.perspective.app.fragments.ProjectPropertiesFragment">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_list"
+            android:name="uk.co.mybirdy.app.CustomersFragment"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            app:layoutManager="LinearLayoutManager"
+            tools:context="uk.co.perspective.app.CustomersFragment"
+            tools:listitem="@layout/item_list_activity" />
+
+    </RelativeLayout>
+
+</LinearLayout>

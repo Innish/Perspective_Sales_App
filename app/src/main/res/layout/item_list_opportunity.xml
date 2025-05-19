@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:id="@+id/selected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_toEndOf="@+id/status"
+        android:background="@drawable/actionholder_flat"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/opportunity_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="20dp"
+            android:text="Secure Containment"
+            android:textAlignment="viewStart"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/customer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/opportunity_name"
+            android:layout_alignStart="@+id/opportunity_name"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="Umbrella Corporation"
+            android:textAlignment="viewStart"
+            android:textColor="#2C6AA1"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/opportunity_stage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/customer_name"
+            android:layout_alignStart="@+id/opportunity_name"
+            android:layout_marginTop="1dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="New (No Contact)"
+            android:textAlignment="viewStart"
+            android:textColor="#039BE5"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/opportunity_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/opportunity_stage"
+            android:layout_alignStart="@+id/opportunity_name"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="£15,000.00"
+            android:textAlignment="viewStart"
+            android:textColor="#72A6BF"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/status"
+        android:layout_width="10dp"
+        android:layout_height="50dp"
+        android:layout_alignTop="@+id/selected"
+        android:layout_alignBottom="@+id/selected"
+        android:background="@drawable/opportunity_hot_background" />
+
+</RelativeLayout>

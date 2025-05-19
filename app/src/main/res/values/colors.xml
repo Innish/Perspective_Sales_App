@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF9800</color>
+    <color name="colorPrimaryDark">#F44336</color>
+    <color name="colorAccent">#AAAAAA</color>
+    <color name="cursor">#505050</color>
+    <color name="colorTransBgStart">#DA6F797E</color>
+    <color name="tab_colour">#F4F4F4</color>
+    <color name="tab_selected">#2E2E2E</color>
+    <color name="selected_tab_color">#8C8171</color>
+    <color name="add_record_color">#818181</color>
+    <color name="list_text_color">#6E6E6E</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
+</resources>

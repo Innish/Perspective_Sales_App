@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingBottom="10dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="8dp"
+    android:paddingTop="10dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/actionholder">
+
+    <TextView
+        android:id="@+id/part_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentTop="true"
+        android:text="BD001/8847"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="0dp"
+        android:textAlignment="viewStart"
+        android:textSize="10sp"
+        android:textColor="@color/colorPrimary"/>
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/part_number"
+        android:layout_alignStart="@+id/part_number"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/totals"
+        android:text="Venti-Pro Personalized Coffee Machine"
+        android:textAlignment="viewStart"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description"
+        android:layout_alignStart="@+id/description"
+        android:text="1.00"
+        android:layout_marginEnd="2dp"
+        android:textAlignment="viewStart"
+        android:textSize="11sp"
+        android:textColor="#1280D5"/>
+
+    <TextView
+        android:id="@+id/symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description"
+        android:layout_marginEnd="2dp"
+        android:layout_toEndOf="@+id/quantity"
+        android:text="x"
+        android:textAlignment="viewStart"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/description"
+        android:layout_marginStart="1dp"
+        android:layout_toEndOf="@+id/symbol"
+        android:text="£149.99"
+        android:textAlignment="viewStart"
+        android:textSize="11sp"
+        android:textColor="#1280D5"/>
+
+    <TextView
+        android:id="@+id/discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quantity"
+        android:layout_alignStart="@+id/part_number"
+        android:layout_marginEnd="5dp"
+        android:text="No Discount"
+        android:textAlignment="viewStart"
+        android:textColor="#46A59B"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/tax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/symbol"
+        android:layout_toEndOf="@+id/discount"
+        android:text="20% Tax (£30.00)"
+        android:textAlignment="viewStart"
+        android:textColor="#5C5C5C"
+        android:textSize="11sp" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/totals"
+        android:layout_below="@+id/description"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/line_total"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignStart="@+id/line_total_alternative_currency"
+            android:background="@drawable/text_input_background"
+            android:backgroundTint="#DADADA"
+            android:paddingLeft="8dp"
+            android:paddingTop="5dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="5dp"
+            android:text="£179.99"
+            android:textAlignment="center"
+            android:textColor="#696969"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/line_total_alternative_currency"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/line_total_alternative_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/total_alternative_background_land"
+            android:backgroundTint="#A2AF66"
+            android:minWidth="60dp"
+            android:paddingLeft="8dp"
+            android:paddingTop="5dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="5dp"
+            android:text="€5.43"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <ImageView
+        android:id="@+id/handle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginEnd="0dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_reorder_grey" />
+
+</RelativeLayout>

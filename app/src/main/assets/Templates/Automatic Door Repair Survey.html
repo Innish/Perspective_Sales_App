@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Site Survey</title>
+    <link href="../Styles/Forms.css" rel="stylesheet" />    
+</head>
+<body>
+    <form id="TheForm">
+
+        <input type="hidden" name="FormName" value="Automatic Door Repair Survey" />
+        <input type="hidden" name="Created" value="" />
+        <input type="hidden" name="CreatedBy" value="" />
+        <input type="hidden" name="Updated" value="" />
+        <input type="hidden" name="UpdatedBy" value="" />
+        <input type="hidden" name="Template" value="" />
+
+        <table style="width: 70%;">
+            <tbody>
+                <tr>
+                    <td colspan="8" class="texthead" style="text-align: center;">Automatic Door Repair Survey</td>
+                </tr>
+                <tr>
+                    <td colspan="8">Rules and Guidelines
+                        <br />
+                        <br />
+                        1. A double asterisk means enter further details in the notes section. Examples Other in Fixing Material or any selected item in Replace/Repair Sections.<br />
+                        2. All dimensions are viewed from inside unless stated.<br />
+                        3. Any labels highlighted in red means they are mandatory fields and a value must be entered.</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="4">Door Location</td>
+                    <td style="background-color: #fff7df; font-weight: 700; text-align: left;" colspan="4">Asset Number</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fff7df;" colspan="4"><input id="DoorLocation" name="DoorLocation" type="text" /></td>
+                    <td style="background-color: #fff7df;" colspan="4"><input id="AssetNumber" name="AssetNumber" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="4">Door Type</td>
+                    <td style="background-color: #fff7df; font-weight: 700; text-align: left;" colspan="4">Engineer Name</td>
+                </tr>
+
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="4">
+                        <select id="DoorType" name="DoorType"> 
+                            <option>Choose Type.....</option>
+                            <option>Single Slide</option>
+                            <option>Bi-Part</option>
+                            <option>Single Swing</option>
+                            <option>Double Swing</option>
+                            <option>Bi-Fold</option>
+                            <option>Curved Slider</option>
+                            <option>**Other</option>
+                        </select>
+                    <td style="background-color: #fff7df;" colspan="4"><input id="EngineerName" name="EngineerName" type="text" /></td>
+                </tr>
+                                <tr>
+                    <td colspan="8" class="texthead";>
+                        Automatic Door Handing</td>
+                </tr>
+
+                <tr>
+                    <td colspan="8">
+                        
+                        <input type="hidden" id="ImageOption_FixingTypeA" name="ImageOption_FixingTypeA" value="" />
+                        <input type="hidden" id="ImageOption_FixingTypeB" name="ImageOption_FixingTypeB" value="" />                       
+
+                        <table style="background-color: #fff;">
+                            <tr>
+                                <td style="text-align: center;">
+                                    <img src="Images/SlidingDoorA.png" id="SlidingDoorA" class="ImageOption" optionGroup="ImageOption_FixingTypeA" style="height: 150px;" />
+                                </td>
+                                <td>
+                                    <img src="Images/SlidingDoorB.png" id="SlidingDoorB" class="ImageOption" optionGroup="ImageOption_FixingTypeA" style="height: 150px;"/>
+                                </td>
+                                <td>
+                                    <img src="Images/SlidingDoorC.png" id="SlidingDoorC" class="ImageOption" optionGroup="ImageOption_FixingTypeA" style="height: 150px;"/>
+                                </td>                                
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">
+                                    <img src="Images/SwingDoorA.png" id="SwingDoorA" class="ImageOption" optionGroup="ImageOption_FixingTypeB" style="height: 150px;"/></td>
+                                <td>
+                                    <img src="Images/SwingDoorB.png" id="SwingDoorB" class="ImageOption" optionGroup="ImageOption_FixingTypeB" style="height: 150px;"/></td>                                
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="8" class="texthead"; style="text-align: center">
+                        Fixing Dimensions</td>
+                </tr>
+                <tr>
+                    <td colspan="8">
+                        <div style="background-image: url('Images/DoorFrameAutomaticandManual.png'); background-repeat:no-repeat; background-size: contain; background-position:center; width:900px; height: 590px; margin: 0px auto;">
+
+                            <input id="Headroom" name="Headroom" type="text" style="position: relative; top: 80px; left: 249px; height: 19px; padding: 2px; width: 98px; text-align: center" />
+                            <input id="Clearance" name="Clearance" type="text" style="position: relative; top: 174px; left: -36px; height: 19px; padding: 2px; width: 98px; text-align: center" />
+                            <input id="Width" name="Width" type="text" style="position: relative; top: 260px; left: 167px; height: 19px; padding: 2px; width: 98px; text-align: center" />
+                            <input id="Height" name="Height" type="text" style="position: relative; top: 357px; left: 17px; height: 19px; padding: 2px; width: 98px; text-align: center" />
+                            <input id="SideRoomLeft" name="SideRoomLeft" type="text" style="position: relative; top: 412px; left: -343px; height: 19px; padding: 2px; width: 98px; text-align: center" />
+                            <input id="SideRoomRight" name="SideRoomRight" type="text" style="position: relative; top: 411px; left: 130px; height: 19px; padding: 2px; width: 97px; text-align: center" />
+                        </div>
+
+                    </td>
+                </tr>
+
+                 <tr>
+                    <td colspan="8"  class="texthead">
+                        Additional Automatic Door Information</td>
+                </tr>
+
+                <tr>
+                    <td style="width: 25%;" colspan="2">
+                        Single Door Slide Direction</td>
+                    <td style="width: 25%;" colspan="2"; style="text-align: left">
+                        Fixing Material</td>
+                    <td style="width: 25%;" colspan="2"; style="text-align: left">
+                        Repair Type</td>
+                    <td style="width: 25%;" colspan="2"; style="text-align: left">
+                        Framework Colour</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <select id="SingleSlideDirection" name="SingleSlideDirection">                            
+                            <option>Left from Inside</option>
+                            <option>Right from Inside</option>                                                                             
+                        </select>
+                    </td>
+                    <td colspan="2">
+                        <select id="FixingMaterial" name="FixingMaterial">                            
+                            <option>Steel</option>
+                            <option>Wood</option>
+                            <option>Brick</option>
+                            <option>**Other</option>
+                        </select></td>
+                    <td colspan="2">
+                        <select id="RepairType" name="RepairType">                            
+                            <option>Operators only</option>
+                            <option>Operators and Framework</option>
+                            <option>N/A if operators only selected</option>
+                            <option>Fully Glazed SGU</option>
+                            <option>Fully Glazed DGU</option>
+                            <option>Mid Rails SGU</option>
+                            <option>Mid Rails DGU</option>
+                            <option>Solid Bottom Panel DGU</option>
+                            <option>Solid Bottom and Top Panel DGU</option>
+                        </select></td>
+
+                    <td colspan="2">
+                        <input id="FrameWorkColour" name="FrameWorkColour" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        Number Of Engineers</td>
+                    <td colspan="2" style="text-align: left">
+                        Labour Time (Hours)</td>
+                    <td colspan="2" style="text-align: left">
+                        Plant Needed</td>
+                    <td colspan="2" style="text-align: left">
+                        Matching Header Colour</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input id="NumberOfEngineers" name="NumberOfEngineers" type="text" /></td>
+                    <td colspan="2">
+                        <input id="LabourTime" name="LabourTime" type="text" /></td>
+                    <td colspan="2">
+                        <select id="PlantNeeded" name="PlantNeeded">                            
+                            <option>No</option>
+                            <option>**Yes</option>
+                        </select></td>
+                    <td colspan="2">
+                        <select id="MatchingHeaderColour" name="MatchingHeaderColour">                            
+                            <option>Yes</option>
+                            <option>No Standard anodised</option>
+                        </select></td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        **Sliding Door
+                        Replacement/Repair/Installation Items</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Activation Sensor</td>
+                    <td style="width: 5%;">
+                        <input id="SlidingRepairs1" name="SlidingRepairs1" type="checkbox" /></td>
+                    <td style="text-align: left">
+                        Rear of Door Safety Sensor</td>
+                    <td style="width: 5%;">
+                        <input id="SlidingRepairs4" name="SlidingRepairs4" type="checkbox" /></td>
+                    <td style="text-align: left">
+                        Pocket Screen</td>
+                    <td style="width: 5%;">
+                        <input id="SlidingRepairs7" name="SlidingRepairs7" type="checkbox" /></td>
+                    <td style="text-align: left">
+                        Electronic Lock</td>
+                    <td style="width: 5%;">
+                        <input id="SlidingRepairs9" name="SlidingRepairs9" type="checkbox" /></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        UPS</td>
+                    <td>
+                        <input id="SlidingRepairs2" name="SlidingRepairs2" type="checkbox" /></td>
+                    <td style="text-align: left">
+                        Wireless Push Button</td>
+                    <td>
+                        <input id="SlidingRepairs5" name="SlidingRepairs5" type="checkbox" /></td>
+                    <td style="text-align: left">
+                        Hardwired Push Button</td>
+                    <td>
+                        <input id="SlidingRepairs8" name="SlidingRepairs8" type="checkbox" /></td>
+                    <td style="text-align: left">
+                        Green Break Glass</td>
+                    <td>
+                        <input id="SlidingRepairs10" name="SlidingRepairs10" type="checkbox" /></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: left">
+                        Access Control</td>
+                    <td>
+                        <input id="SlidingRepairs3" name="SlidingRepairs3" type="checkbox" /></td>
+                    <td style="text-align: left">
+                        Not Listed</td>
+                    <td>
+                        <input id="SlidingRepairs6" name="SlidingRepairs6" type="checkbox" /></td>
+                    <td style="text-align: left">
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                    <td colspan="2">
+                        &nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        **Swing Door
+                        Replacement/Repair/Installation Items</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Activation Sensor</td>
+                    <td style="width: 5%;">
+                        <input id="SwingRepairs1" name="SwingRepairs1" type="checkbox" /></td>
+                    <td style="text-align: left">
+                        On Door Safety Sensor</td>
+                    <td style="width: 5%;">
+                        <input id="SwingRepairs4" name="SwingRepairs4" type="checkbox" /></td>
+                    <td style="text-align: left">
+                        <strong>Access Control</strong></td>
+                    <td style="width: 5%;">
+                        <input id="SwingRepairs7" name="SwingRepairs7" type="checkbox" /></td>
+                    <td style="text-align: left">
+                        Internal Battery Back Up</td>
+                    <td style="width: 5%;">
+                        <input id="SwingRepairs9" name="SwingRepairs9" type="checkbox" /></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        External UPS</td>
+                    <td>
+                        <input id="SwingRepairs2" name="SwingRepairs2" type="checkbox" /></td>
+                    <td style="text-align: left">
+                        Wireless Push Button</td>
+                    <td>
+                        <input id="SwingRepairs5" name="SwingRepairs5" type="checkbox" /></td>
+                    <td style="text-align: left">
+                        Hardwired Push Button</td>
+                    <td>
+                        <input id="SwingRepairs8" name="SwingRepairs8" type="checkbox" /></td>
+                    <td style="text-align: left">
+                        Green Break Glass</td>
+                    <td>
+                        <input id="SwingRepairs10" name="SwingRepairs10" type="checkbox" /></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: left">
+                        Barrier</td>
+                    <td>
+                        <input id="SwingRepairs3" name="SwingRepairs3" type="checkbox" /></td>
+                    <td style="text-align: left">
+                        Not Listed</td>
+                    <td>
+                        <input id="SwingRepairs6" name="SwingRepairs6" type="checkbox" /></td>
+                    <td>
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                    <td colspan="2">
+                        &nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        <strong>Other Plant Required</strong></td>
+                </tr>
+
+                <tr>
+                    <td colspan="8">
+                        <textarea id="OtherPlant" cols="20" name="OtherPlant" rows="10" placeholder="Describe in detail the plant required, but only if plant pull down menu equals Yes..." ></textarea></td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        <strong>Notes</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="8">
+                        <textarea id="Notes" cols="20" name="Notes" rows="10" placeholder="Describe in detail any important notes or extras required that are not already listed in the extras section..."></textarea>
+
+                    </td>
+                </tr>
+            </table>
+
+    </form>
+</body>
+</html>

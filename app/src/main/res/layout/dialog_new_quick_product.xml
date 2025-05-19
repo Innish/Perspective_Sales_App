@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/dialog_rounded"
+    tools:context="uk.co.perspective.app.dialogs.NewTaskDialog"
+    android:padding="15dp">
+
+    <LinearLayout
+        android:id="@+id/taskLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:minWidth="400dp"
+        tools:context="uk.co.perspective.app.dialogs.NewTaskDialog">
+
+        <EditText
+            android:id="@+id/partNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:autofillHints="Subject"
+            android:hint="Part Number"
+            android:textColorHint="#C6C6C6"
+            android:inputType="textCapCharacters"
+            android:textColorHighlight="#ECECEC"
+            android:background="@drawable/text_input_background"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="Subject"
+            android:hint="Description"
+            android:textColorHint="#C6C6C6"
+            android:gravity="start|top"
+            android:inputType="textMultiLine|textCapSentences"
+            android:lines="2"
+            android:textColorHighlight="#ECECEC"
+            android:background="@drawable/text_input_background"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/unit_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="Unit Price"
+            android:hint="Unit Price"
+            android:textColorHint="#C6C6C6"
+            android:inputType="numberDecimal"
+            android:textColorHighlight="#ECECEC"
+            android:background="@drawable/text_input_background"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp"/>
+
+        <EditText
+            android:id="@+id/tax_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:layout_marginTop="10dp"
+            android:autofillHints="Tax Rate"
+            android:hint="Default Tax Rate (%)"
+            android:textColorHint="#C6C6C6"
+            android:inputType="numberDecimal"
+            android:textColorHighlight="#ECECEC"
+            android:background="@drawable/text_input_background"
+            android:textCursorDrawable="@null"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You can add more details about this product later"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/selected_tab_color"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/actionholder"
+            android:layout_marginTop="15dp">
+
+            <Button
+                android:id="@+id/save"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_ok"
+                android:layout_weight="1"
+                android:theme="@style/FlatButtonStyle"
+                android:textColor="@color/colorPrimary"/>
+
+            <Button
+                android:id="@+id/cancel"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dialog_cancel"
+                android:layout_weight="1"
+                android:theme="@style/FlatButtonStyle"
+                android:textColor="@color/colorPrimary"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

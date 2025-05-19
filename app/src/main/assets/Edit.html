@@ -1,0 +1,673 @@
+﻿<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <meta charset="utf-8" />
+    <title>Edit Document</title>
+
+    <link href="Styles/Mobile.css" rel="stylesheet" />
+    <link href="Styles/SignaturePad.css" rel="stylesheet" />
+    <link href="Styles/jQuery-ui.css" rel="stylesheet" />
+
+    <script src="Scripts/SignaturePad.js"></script>
+    <script src="Scripts/General.js"></script>
+    <script src="Scripts/jquery-3.2.1.js"></script>
+
+    <script>
+
+        window.onload = function () {
+
+            var height = window.innerHeight;
+
+            if (getParameterByName('Template')) {
+
+                var subFolder = '';
+
+                if (getParameterByName('subFolder'))
+                {
+                    subFolder = getParameterByName('subFolder')
+                }
+
+                var Title = getParameterByName('Template').replace('.html', '');
+                var theForm = document.getElementById("frmEditDocument");
+                var assetNumber = 'No Asset';
+                var engineerName = '';
+                var doorLocation = '';
+
+                if (Title.length > 25) {
+                    DocumentTitle.innerText = Title.substring(0, 45) + '...';
+                }
+                else {
+                    DocumentTitle.innerText = Title;
+                }
+
+                if (getParameterByName('DoorLocation'))
+                {
+                    doorLocation = getParameterByName('DoorLocation');
+                }
+
+                if (getParameterByName('AssetNumber'))
+                {
+                    assetNumber = getParameterByName('AssetNumber');
+                }
+
+                if (getParameterByName('EngineerName'))
+                {
+                    engineerName = getParameterByName('EngineerName');
+                }
+
+                //Load the template
+
+                var iframe = document.createElement('iframe');
+                iframe.style = 'width: 100%; height: 100%; border: none; margin-top: 40px;';
+                iframe.id = "TemplateEditor";
+
+                if (subFolder != '')
+                {
+                    iframe.src = 'Templates/' + subFolder + '/' + getParameterByName('Template');
+                }
+                else
+                {
+                    iframe.src = 'Templates/' + getParameterByName('Template');
+                }
+
+                //document.body.appendChild(iframe);
+
+                theForm.appendChild(iframe);
+
+                if (getParameterByName('IsNew') == 'true') {
+
+                    if (iframe.addEventListener)
+                        iframe.addEventListener('load', function () { NewDocument(doorLocation, assetNumber, engineerName); }, true);
+                    else if (iframe.attachEvent)
+                        iframe.attachEvent('onload', function () { NewDocument(doorLocation, assetNumber, engineerName); });
+
+                }
+                else {
+
+                    //Android.showToast("Loading...");
+
+                    if (iframe.addEventListener)
+                        iframe.addEventListener('load', function () { LoadDocument(); }, true);
+                    else if (iframe.attachEvent)
+                        iframe.attachEvent('onload', function () { LoadDocument(); });
+
+                }
+            }
+        }
+
+        function LoadDocument() {
+
+            var height = window.innerHeight;
+
+            var JSONdocument = Android.LoadFormData(parseInt(getParameterByName('ID')));
+
+            var deserializedDocument = JSON.parse(JSONdocument);
+
+                var ifr = document.getElementById("TemplateEditor");
+                var ifrDoc = ifr.contentDocument || ifr.contentWindow.document;
+                var theForm = ifrDoc.getElementById("TheForm");
+
+                $.each(deserializedDocument, function (key, value) {
+                    var ctrl = $('[name=' + key + ']', theForm);
+                    switch (ctrl.prop("type")) {
+                        case "radio": 
+                            ctrl.each(function () {
+                                if ($(this).attr('value') === value) $(this).attr("checked", value);
+                            });
+                            break;
+                        case "checkbox":
+                            ctrl.each(function () {
+                                if (value === "on") $(this).attr("checked", value);
+                            });
+                            break;
+
+                        case "input":
+                            ctrl.each(function () {
+                                if ($(this).attr('src') == '../Resources/SignIcon.png') {
+
+                                    
+                                }
+                            });
+                            break;
+
+                        default:
+                            ctrl.val(value);
+                    }
+
+                    //Is it a signature
+
+                    if (key.indexOf('Signature') === 0)
+                    {
+                        ifrDoc.getElementById(key + '_').src = "data:image/png;base64," + value; 
+                    }
+
+                    if (key.indexOf('Drawing') === 0)
+                    {
+                        if (key.indexOf('BaseImage') > 0) {
+
+                        }
+                        else {
+                            ifrDoc.getElementById(key + '_').src = "data:image/png;base64," + value;
+                        }
+                    }
+
+                    if (key.indexOf('ImageOption') === 0) {
+
+                        if (value != "") {
+                            ifrDoc.getElementById(value).parentElement.style.backgroundColor = 'rgb(40, 212, 123)';
+                        }
+                    }
+
+                    if (key.indexOf('ImageAttachment') === 0) {
+
+                        //Add to Image Attachment Section
+
+                        var NewImage = document.createElement('img');
+                        NewImage.style = 'height: 100px;';
+
+                        var NewImageData = document.createElement('input');
+
+                        NewImageData.type = "hidden";
+                        NewImageData.name = key;
+                        NewImageData.value = value;
+
+                        NewImage.src = value;
+
+                        $('div.ImageHolder', theForm).append(NewImage);
+                        $('div.ImageHolder', theForm).append(NewImageData);
+                    }
+                });  
+
+                $('img.signature', theForm).attr("onclick", "parent.CollectSignature(this);");
+                $('img.LookupProduct', theForm).attr("onclick", "parent.LookupPart(this);");
+                $('img.drawing', theForm).attr("onclick", "parent.DrawOnThis(this);");
+                $('img.ImageOption', theForm).attr("onclick", "parent.SelectImageOption(this);");
+                $('div.AddNewImageAttachment', theForm).attr("onclick", "parent.AddNewImage(this);");
+                $('div.ImageHolder', theForm).append("<div class=\"AddNewImageAttachment\"><input id=\"FileUpload\" type=\"file\" onchange=\"parent.AddNewImage(this);\" /></div>");
+
+        }
+
+        function NewDocument(doorLocation, assetNumber, engineerName) {
+
+            //Find All Signatures
+
+            var height = window.innerHeight;
+
+            var ifr = document.getElementById("TemplateEditor");
+            var ifrDoc = ifr.contentDocument || ifr.contentWindow.document;
+            var theForm = ifrDoc.getElementById("TheForm");
+
+            ifr.height = (height - 40) + 'px';
+
+            $('img.signature', theForm).attr("onclick", "parent.CollectSignature(this);");
+            $('img.LookupProduct', theForm).attr("onclick", "parent.LookupPart(this);");
+            $('img.drawing', theForm).attr("onclick", "parent.DrawOnThis(this);");
+            $('img.ImageOption', theForm).attr("onclick", "parent.SelectImageOption(this);");
+            $('div.AddNewImageAttachment', theForm).attr("onclick", "parent.AddNewImage(this);");   
+            $('div.ImageHolder', theForm).append("<div class=\"AddNewImageAttachment\"><input id=\"FileUpload\" type=\"file\" onchange=\"parent.AddNewImage(this);\" /></div>");
+
+            //Insert Asset Number & other pre-defined data if available
+
+            if (ifrDoc.getElementById("DoorLocation"))
+            {
+                if (doorLocation != 'null')
+                {
+                    ifrDoc.getElementById("DoorLocation").value = doorLocation;
+                }
+            }
+
+            if (ifrDoc.getElementById("AssetNumber"))
+            {
+                if (assetNumber != 'null')
+                {
+                    ifrDoc.getElementById("AssetNumber").value = assetNumber;
+                }
+            }
+
+            if (ifrDoc.getElementById("EngineerName"))
+            {
+                if (engineerName != 'null')
+                {
+                    ifrDoc.getElementById("EngineerName").value = engineerName;
+                }
+            }
+        }
+
+        function Discard() {
+            Android.CloseForm();
+        }
+
+        function Save() {
+
+            var DateNow = new Date();
+
+            var ifr = document.getElementById("TemplateEditor");
+            var ifrDoc = ifr.contentDocument || ifr.contentWindow.document;
+            var theForm = ifrDoc.getElementById("TheForm");
+
+            var theID = parseInt(getParameterByName('ID'));
+
+            //Fix the data first
+
+            var JSONArray = objectifyForm($(theForm).serializeArray())
+
+            //Add Additional Data
+
+            if (getParameterByName('IsNew') == 'true') {
+
+                JSONArray.Created = DateNow;
+                JSONArray.CreatedBy = Android.GetDisplayName();
+                JSONArray.Template = getParameterByName('Template');                
+
+                var JSONString = JSON.stringify(JSONArray);
+
+                //Send to DB and close
+
+                Android.SaveFormData(theID, JSONString);
+            }
+            else {
+
+                //Update the document
+
+                JSONArray.Updated = DateNow;
+                JSONArray.UpdatedBy = ""; //Temp
+
+                var JSONString = JSON.stringify(JSONArray);
+
+                //Send to DB and close
+
+                Android.SaveFormData(theID, JSONString);
+            }
+        }
+
+        function objectifyForm(formArray) {//serialize data function
+
+            var returnArray = {};
+            for (var i = 0; i < formArray.length; i++) {
+                returnArray[formArray[i]['name']] = formArray[i]['value'];
+            }
+            return returnArray;
+        }
+
+        function SelectImageOption(placeHolder) {
+
+            var ifr = document.getElementById("TemplateEditor");
+            var ifrDoc = ifr.contentDocument || ifr.contentWindow.document;
+            var theForm = ifrDoc.getElementById("TheForm");
+
+            var ValueContainer = placeHolder.getAttribute("optiongroup");
+
+            //Clear All Highlighted Options in Group
+
+            var OptionGroup = ifrDoc.querySelectorAll('img[optionGroup="' + ValueContainer + '"]');
+
+            for (i = 0; i < OptionGroup.length; ++i) {
+                OptionGroup[i].parentElement.style.backgroundColor = null;
+            }
+
+            placeHolder.parentElement.style.backgroundColor = 'rgb(40, 212, 123)';
+
+            theForm[ValueContainer].value = placeHolder.id;
+        }
+
+        function CollectSignature(placeHolder) {
+
+            document.getElementById("signature-pad").style.visibility = '';
+            document.getElementById("ModalForm").style.visibility = '';
+            document.getElementById("SignatureReference").value = placeHolder.id;
+
+            //Re-Position for iPad
+
+            //var ifr = document.getElementById("TemplateEditor");
+
+            //document.getElementById("ModalForm").style.top =  ifr.scrollTop + 'px';
+        }
+
+        function DrawOnThis(placeHolder) {
+
+            var canvas = document.getElementById('sketchpad');
+
+            img = document.createElement('img'),
+                ctx = canvas.getContext ? canvas.getContext('2d') : null;
+
+            //canvas.width = window.innerWidth;
+            //canvas.height = window.innerHeight;
+
+            img.onload = function () {
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            };
+
+            img.src = placeHolder.src;
+
+            CurrentSize = 1;
+            CurrentColourR = 0;
+            CurrentColourG = 0;
+            CurrentColourB = 0;
+
+            document.getElementById("drawing-pad").style.visibility = '';
+            document.getElementById("ModalForm").style.visibility = '';
+            document.getElementById("DrawingReference").value = placeHolder.id;
+
+            //Need to set canvas image not background.
+
+            //var urlString = 'url(' + placeHolder.src + ')';
+
+            //document.getElementById("sketchpad").style.backgroundImage = urlString;
+
+        }
+
+        function drawImageProp(ctx, img, x, y, w, h, offsetX, offsetY) {
+
+            if (arguments.length === 2) {
+                x = y = 0;
+                w = ctx.canvas.width;
+                h = ctx.canvas.height;
+            }
+
+            // default offset is center
+            offsetX = typeof offsetX === "number" ? offsetX : 0.5;
+            offsetY = typeof offsetY === "number" ? offsetY : 0.5;
+
+            // keep bounds [0.0, 1.0]
+            if (offsetX < 0) offsetX = 0;
+            if (offsetY < 0) offsetY = 0;
+            if (offsetX > 1) offsetX = 1;
+            if (offsetY > 1) offsetY = 1;
+
+            var iw = img.width,
+                ih = img.height,
+                r = Math.min(w / iw, h / ih),
+                nw = iw * r,   // new prop. width
+                nh = ih * r,   // new prop. height
+                cx, cy, cw, ch, ar = 1;
+
+            // decide which gap to fill
+            if (nw < w) ar = w / nw;
+            if (Math.abs(ar - 1) < 1e-14 && nh < h) ar = h / nh;  // updated
+            nw *= ar;
+            nh *= ar;
+
+            // calc source rectangle
+            cw = iw / (nw / w);
+            ch = ih / (nh / h);
+
+            cx = (iw - cw) * offsetX;
+            cy = (ih - ch) * offsetY;
+
+            // make sure source rectangle is valid
+            if (cx < 0) cx = 0;
+            if (cy < 0) cy = 0;
+            if (cw > iw) cw = iw;
+            if (ch > ih) ch = ih;
+
+            // fill image in dest. rectangle
+            ctx.drawImage(img, cx, cy, cw, ch, x, y, w, h);
+        }
+
+        $(document).ready(function () {
+
+            //Size the canvas
+
+            document.getElementById("sketchpad")
+
+            var wrapper = document.getElementById("signature-pad"),
+                clearButton = wrapper.querySelector("[data-action=clear]"),
+                saveButton = wrapper.querySelector("[data-action=save]"),
+                cancelButton = wrapper.querySelector("[data-action=cancel]"),
+                canvas = wrapper.querySelector("canvas"),
+                signaturePad;
+
+            //var drawingWrapper = document.getElementById("drawing-pad"),
+            //    clearDrawingButton = drawingWrapper.querySelector("[data-action=clearDrawing]"),
+            //    saveDrawingButton = drawingWrapper.querySelector("[data-action=saveDrawing]"),
+            //    cancelDrawingButton = drawingWrapper.querySelector("[data-action=cancelDrawing]"),
+            //    drawingCanvas = drawingWrapper.querySelector("canvas"),
+            //    drawingPad;
+
+
+            // Adjust canvas coordinate space taking into account pixel ratio,
+            // to make it look crisp on mobile devices.
+            // This also causes canvas to be cleared.
+
+            function resizeCanvas() {
+                // When zoomed out to less than 100%, for some very strange reason,
+                // some browsers report devicePixelRatio as less than 1
+                // and only part of the canvas is cleared then.
+                var ratio = Math.max(window.devicePixelRatio || 1, 1);
+                canvas.width = canvas.offsetWidth * ratio;
+                canvas.height = canvas.offsetHeight * ratio;
+                canvas.getContext("2d").scale(ratio, ratio);
+
+                //drawingCanvas.width = canvas.offsetWidth * ratio;
+                //drawingCanvas.height = canvas.offsetHeight * ratio;
+                //drawingCanvas.getContext("2d").scale(ratio, ratio);
+            }
+
+            window.onresize = resizeCanvas;
+            resizeCanvas();
+
+            signaturePad = new SignaturePad(canvas);
+            //drawingPad = new DrawingPad(drawingCanvas);
+
+            clearButton.addEventListener("click", function (event) {
+                signaturePad.clear();
+            });
+
+            //clearDrawingButton.addEventListener("click", function (event) {
+            //    drawingPad.clear();
+            //});
+
+
+            saveButton.addEventListener("click", function (event) {
+
+                if (signaturePad.isEmpty()) {
+                    alert("Please provide signature first.");
+                } else {
+                    //window.open(signaturePad.toDataURL());
+                    var dataString = signaturePad.toDataURL("image/png");
+
+                    event.preventDefault();
+
+                    dataString = dataString.replace('data:image/png;base64,', '');
+
+                    var ifr = document.getElementById("TemplateEditor");
+                    var ifrDoc = ifr.contentDocument || ifr.contentWindow.document;
+
+                    //ifrDoc.getElementsByName(document.getElementById("SignatureReference").value).value = dataString;
+                    ifrDoc.getElementById(document.getElementById("SignatureReference").value.replace('_', '')).value = dataString;
+
+                    //Replace the image
+
+                    ifrDoc.getElementById(document.getElementById("SignatureReference").value).src = "data:image/png;base64," + dataString;
+                    signaturePad.clear();
+
+                    document.getElementById("signature-pad").style.visibility = 'hidden';
+                    document.getElementById("ModalForm").style.visibility = 'hidden';
+                }
+            });
+
+            //saveDrawingButton.addEventListener("click", function (event) {
+
+            //    if (drawingPad.isEmpty()) {
+            //        alert("Please draw you image");
+            //    } else {
+            //        //window.open(signaturePad.toDataURL());
+            //        var dataString = drawingPad.toDataURL("image/png");
+
+            //        event.preventDefault();
+
+            //        dataString = dataString.replace('data:image/png;base64,', '');
+
+            //        var ifr = document.getElementById("TemplateEditor");
+            //        var ifrDoc = ifr.contentDocument || ifr.contentWindow.document;
+
+            //        //ifrDoc.getElementsByName(document.getElementById("SignatureReference").value).value = dataString;
+            //        ifrDoc.getElementById(document.getElementById("DrawingReference").value.replace('_', '')).value = dataString;
+
+            //        //Replace the image
+
+            //        ifrDoc.getElementById(document.getElementById("DrawingReference").value).src = "data:image/png;base64," + dataString;
+            //        drawingPad.clear();
+
+            //        document.getElementById("drawing-pad").style.visibility = 'hidden';
+            //        document.getElementById("ModalForm").style.visibility = 'hidden';
+            //    }
+            //});
+
+            cancelButton.addEventListener("click", function (event) {
+                signaturePad.clear();
+                document.getElementById("signature-pad").style.visibility = 'hidden';
+                document.getElementById("ModalForm").style.visibility = 'hidden';
+            });
+
+            //cancelDrawingButton.addEventListener("click", function (event) {
+            //    drawingPad.clear();
+            //    document.getElementById("drawing-pad").style.visibility = 'hidden';
+            //    document.getElementById("ModalForm").style.visibility = 'hidden';
+
+            //});
+
+        });
+
+        function loadImage(url) {
+            return new Promise(resolve => { let i = new Image(); i.onload = () => { resolve(i) }; i.src = url; });
+        }
+
+        function CloseSketchpad() {
+
+            document.getElementById("drawing-pad").style.visibility = 'hidden';
+            document.getElementById("ModalForm").style.visibility = 'hidden';
+            document.getElementById("DrawingReference").value = '';
+        }
+
+        function ClearSketchpad() {
+
+            canvas = document.getElementById('sketchpad');
+
+            if (canvas.getContext)
+                ctx = canvas.getContext('2d');
+
+            clearCanvas(canvas, ctx);
+
+            img = document.createElement('img'),
+                ctx = canvas.getContext ? canvas.getContext('2d') : null;
+
+            //canvas.width = window.innerWidth;
+            //canvas.height = window.innerHeight;
+
+            img.onload = function () {
+                ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+            };
+
+            img.src = document.getElementById(document.getElementById("DrawingReference").value + 'BaseImage').value;
+
+        }
+
+        function SaveSketch() {
+
+            canvas = document.getElementById('sketchpad');
+
+            //for (var _len = arguments.length, options = Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
+            //        options[_key - 1] = arguments[_key];
+            //    }
+
+            //var dataString = (_canvas = this._canvas).toDataURL.apply(_canvas, [type].concat(options));
+
+            var dataString = canvas.toDataURL();
+
+            dataString = dataString.replace('data:image/png;base64,', '');
+
+            var ifr = document.getElementById("TemplateEditor");
+            var ifrDoc = ifr.contentDocument || ifr.contentWindow.document;
+
+            //ifrDoc.getElementsByName(document.getElementById("SignatureReference").value).value = dataString;
+            ifrDoc.getElementById(document.getElementById("DrawingReference").value.replace('_', '')).value = dataString;
+
+            //Replace the image
+
+            ifrDoc.getElementById(document.getElementById("DrawingReference").value).src = "data:image/png;base64," + dataString;
+
+            document.getElementById("drawing-pad").style.visibility = 'hidden';
+            document.getElementById("ModalForm").style.visibility = 'hidden';
+            //document.getElementById("DrawingReference").value = '';
+        }
+
+        function SetColour(r, g, b) {
+            CurrentColourR = r;
+            CurrentColourG = g;
+            CurrentColourB = b;
+        }
+
+        function SetSize(size) {
+            CurrentSize = size;
+        }
+
+        function AddNewImage(placeHolder) {
+
+            var ifr = document.getElementById("TemplateEditor");
+            var ifrDoc = ifr.contentDocument || ifr.contentWindow.document;
+
+            var file = ifrDoc.getElementById('FileUpload').files[0];
+
+            getBase64(file).then(
+                data => AddImageToHolder(data, placeHolder.parentElement.parentElement, file.name)
+            );
+        }
+
+        function AddImageToHolder(data, placeHolder, Name) {
+
+            var NewImage = document.createElement('img');
+            NewImage.style = 'height: 100px;';
+
+            var NewImageData = document.createElement('input');
+
+            NewImageData.type = "hidden";
+            NewImageData.name = "ImageAttachment_" + Name.replace('.png', '').replace('.jpg', '').replace('.gif', '');
+            NewImageData.value = data;
+
+            NewImage.src = data;
+
+            placeHolder.appendChild(NewImage);
+            placeHolder.appendChild(NewImageData);
+
+        }
+
+        function getBase64(file) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = () => resolve(reader.result);
+                reader.onerror = error => reject(error);
+            });
+        }
+
+    </script>
+
+</head>
+<body style="height: 100%; overflow: auto;">
+    <form id="frmEditDocument" runat="server" style="height: 100%;">
+
+        <div class="MenuBar_ANDROID" style="position: fixed; width: 100%; top: 0px;">
+            <div id="DiscardClose" class="Discard_ANDROID" onclick="Discard();">Close</div>
+            <div id="DocumentTitle" class="DocumentTitle_ANDROID"></div>
+            <div id="SaveUpdate" class="Save_ANDROID" onclick="Save();">Save</div>
+        </div>
+
+        <div id="ModalForm" class="Modal" style="visibility: hidden;"></div>
+
+        <div id="signature-pad" class="m-signature-pad" style="visibility: hidden; position: fixed;">
+            <div>Please Sign</div>
+            <div class="m-signature-pad--body">
+                <canvas></canvas>
+            </div>
+            <div class="m-signature-pad--footer">
+                <div class="description">Please Sign above</div>
+                <button type="button" class="button clear" style="margin-left: 70px;" data-action="clear">Clear</button>
+                <button type="button" class="button save" data-action="save">Save</button>
+                <button type="button" class="button cancel" data-action="cancel">Cancel</button>
+                <input type="hidden" id="SignatureReference" />
+            </div>
+        </div>
+    </form>
+</body>
+</html>

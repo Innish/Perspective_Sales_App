@@ -1,0 +1,344 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Dynamic Risk Assessment</title>
+    <link href="../Styles/Forms.css" rel="stylesheet" />    
+</head>
+<body>
+    <form id="TheForm">
+
+                        <input type="hidden" id="ImageOption_FixingTypeB" name="ImageOption_FixingTypeB" value="" />                       
+
+                        <input type="hidden" id="ImageOption_FixingTypeA" name="ImageOption_FixingTypeA" value="" />
+
+        <input type="hidden" name="FormName" value="Dynamic Risk Assessment" />
+        <input type="hidden" name="Created" value="" />
+        <input type="hidden" name="CreatedBy" value="" />
+        <input type="hidden" name="Updated" value="" />
+        <input type="hidden" name="UpdatedBy" value="" />
+        <input type="hidden" name="Template" value="" />
+
+        <table style="width: 70%;">
+            <tbody>
+                <tr>
+                    <td colspan="5" class="texthead"; style="text-align: center; font-weight: bold;">Dynamic Risk Assessment</td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        This form is for use by competent operatives who must assess each site or task, before or as it develops and is in addition to the main risk assessment and method statement. It purpose is to identify any hazards that have not been identified. If hazards are identified they must be controlled to bring the risk As Low As Reasonable Practicable. If the risk cannot be controlled and remains high, operatives must seek advice from their supervisor before continuing. </td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="3">Customer</td>
+                    <td style="background-color: #fff7df; font-weight: 700; text-align: left;" colspan="2">Site</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fff7df;" colspan="3"><input id="CustomerName" name="CustomerName" type="text" /></td>
+                    <td style="background-color: #fff7df;" colspan="2"><input id="SiteName" name="SiteName" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="3">Assessment Date</td>
+                    <td style="background-color: #fff7df; font-weight: 700; text-align: left;" colspan="2">&nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="3">
+                                                
+                        &nbsp;<input id="AssessmentDate" name="AssessmentDate" type="date" /><td style="background-color: #fff7df;" colspan="2">&nbsp;</td>
+                </tr>
+                                <tr>
+                    <td colspan="5" class="texthead";>
+                        Assessment Of Work
+                    </td>
+                </tr>
+
+                                <tr>
+                    <td colspan="5" class="texthead";>
+                        <textarea id="AssessmentOfWork" name="AssessmentOfWork" cols="20" rows="10" placeholder="" ></textarea></td>
+                </tr>
+
+                <tr>
+                    <td colspan="5" class="texthead"; style="font-weight: bold;">
+                        Risk Management Guide</td>
+                </tr>
+
+                 <tr>
+                    <td colspan="5"  class="texthead" style="background-color: #eaeaea">
+                        Use the list below to decide how best to control a hazard. Always try to apply controls at the top of the list in 
+                        preference to those at the bottom. You should not rely on training and PPE to control a hazard. 
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        1. Eliminate the hazard</td>
+                    <td colspan="2" style="text-align: left;">
+                        6. Good Housekeeping</td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        2. Substitute the method, machine, chemical etc</td>
+                    <td colspan="2" style="text-align: left;">
+                        7. Reduced exposure time to the hazard </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        3. Isolate the hazard, area, task etc. </td>
+                    <td colspan="2" style="text-align: left;">
+                        8. Information, Instruction and Training</td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        4. Enclose the hazard, area, task etc.</td>
+                    <td colspan="2" style="text-align: left;">
+                        9. PPE </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                       5. Local and general Ventilation</td>
+                    <td colspan="2" style="text-align: left;">
+                        10. Welfare </td>
+                </tr>
+
+                <tr>
+                    <td colspan="5" class="texthead" style="font-weight: bold;">
+                        Hazard Codes</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        1. Access/Egress</td>
+                    <td style="text-align: left">
+                        10. Grinding/Cutting</td>
+                    <td style="text-align: left">
+                        19. Manual Handling </td>
+                    <td style="text-align: left">
+                        28. Poor Atmosphere/Gasses</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        2. Traffic Management</td>
+                    <td style="text-align: left">
+                        11. Welding</td>
+                    <td style="text-align: left">
+                        20. Slips/Trips/Falls </td>
+                    <td style="text-align: left">
+                        29. Vegetation</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        3. Chemicals/COSHH </td>
+                    <td style="text-align: left">
+                        12. Dust/Fumes/Smoke</td>
+                    <td style="text-align: left">
+                        21. Ground Conditions </td>
+                    <td style="text-align: left">
+                        30. Animal/Human Waste</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: left">
+                        4. Plant to be used </td>
+                    <td style="text-align: left">
+                        13. Excavation</td>
+                    <td style="text-align: left">
+                        22. Adverse Weather </td>
+                    <td style="text-align: left">
+                        31. Asbestos</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: left">
+                        5. Machinery</td>
+                    <td style="text-align: left">
+                        14. Underground Services </td>
+                    <td style="text-align: left">
+                        23. Extreme Temperature</td>
+                    <td style="text-align: left">
+                        32. Fire</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: left">
+                        6. Mechanical Lifting/Slinging</td>
+                    <td style="text-align: left">
+                        15. Overhead Power Lines</td>
+                    <td style="text-align: left">
+                        24. Direct Sun-UV Radiation</td>
+                    <td style="text-align: left">
+                        33. Other</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: left">
+                        7. Suspended Loads</td>
+                    <td style="text-align: left">
+                        16. Electricity/Power </td>
+                    <td style="text-align: left">
+                        25. Poor Lighting</td>
+                    <td style="text-align: left">
+                        &nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: left">
+                        8. Work at Height</td>
+                    <td style="text-align: left">
+                        17. Noise - Staff & Others</td>
+                    <td style="text-align: left">
+                        26. Live Traffic</td>
+                    <td style="text-align: left">
+                        &nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" style="text-align: left">
+                        9. Falling Objects</td>
+                    <td style="text-align: left">
+                        18. Vibration </td>
+                    <td style="text-align: left">
+                        27. Confined Spaces</td>
+                    <td style="text-align: left">
+                        &nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="5" class="texthead" style="background-color: #eaeaea">
+                        Use the following boxes to detail your assessments of the hazards identified above, The controls you have put in place and the residual risk that remains. If the residual risk remains high, or you have difficulty controlling a hazard, contact your supervisor before continuing. </td>
+                </tr>
+
+                <tr>
+                    <td style="width: 20%; font-weight: bold;">
+                        Code (From Above)</td>
+                    <td style="width: 5%; font-weight: bold;">
+                        Risk (L/M/H)</td>
+                    <td style="width: 25%; text-align: left; font-weight: bold;">
+                        Hazzard Identified</td>
+                    <td style="width: 25%; text-align: left; font-weight: bold;">
+                        Controls In/put in place</td>
+                    <td style="width: 25%; text-align: left; font-weight: bold;">
+                        Residual</td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input id="Code1" name="Code1" type="number" /></td>
+                    <td style="width: 5%;">
+                        <input id="RiskFactor1" name="RiskFactor1" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="HazzardIdentified1" name="HazzardIdentified1" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="Controls1" name="Controls1" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="Residual1" name="Residual1" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input id="Code2" name="Code2" type="number" /></td>
+                    <td style="width: 5%;">
+                        <input id="RiskFactor2" name="RiskFactor2" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="HazzardIdentified2" name="HazzardIdentified2" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="Controls2" name="Controls2" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="Residual2" name="Residual2" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="Code3" name="Code3" type="number" /></td>
+                    <td style="width: 5%;">
+                        <input id="RiskFactor3" name="RiskFactor3" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="HazzardIdentified3" name="HazzardIdentified3" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="Controls3" name="Controls3" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="Residual3" name="Residual3" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="Code4" name="Code4" type="number" /></td>
+                    <td style="width: 5%;">
+                        <input id="RiskFactor4" name="RiskFactor4" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="HazzardIdentified4" name="HazzardIdentified4" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="Controls4" name="Controls4" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="Residual4" name="Residual4" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="Code5" name="Code5" type="number" /></td>
+                    <td style="width: 5%;">
+                        <input id="RiskFactor5" name="RiskFactor5" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="HazzardIdentified5" name="HazzardIdentified5" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="Controls5" name="Controls5" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="Residual5" name="Residual5" type="text" /></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input id="Code6" name="Code6" type="number" /></td>
+                    <td style="width: 5%;">
+                        <input id="RiskFactor6" name="RiskFactor6" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="HazzardIdentified6" name="HazzardIdentified6" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="Controls6" name="Controls6" type="text"/></td>
+                    <td style="text-align: left">
+                        <input id="Residual6" name="Residual6" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td colspan="5" class="texthead" style="font-weight: bold;">
+                        Evidence of Findings <span style="font-weight: normal;"> - Photographic evidence</span></td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <div id="ImageHolder1" class="ImageHolder">
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        Risk Assessor Name</td>
+                    <td>Site Staff Name</td>
+                    <td>Position</td>
+                    <td>Date</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input id="RiskAssessorName" name="RiskAssessorName" type="text" /></td>
+                    <td>
+                        <input id="SiteStaffName" name="SiteStaffName" type="text" /></td>
+                    <td>
+                        <input id="SiteStaffPosition" name="SiteStaffPosition" type="text" /></td>
+                    <td>
+                        <input id="DateSigned" name="DateSigned" type="text" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <img  class="signature" id="Signature1_" alt="Sign Here" src="SignIcon.png" /><input type="hidden" id="Signature1" name="Signature1" value="" /></td>
+                    <td>                        
+                        <img  class="signature" id="Signature2_" alt="Sign Here" src="SignIcon.png" /><input type="hidden" id="Signature2" name="Signature2" value="" /></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="uk.co.perspective.app.fragments.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_leads"
+            app:destination="@id/nav_leads"
+            app:popEnterAnim="@anim/fade_in"/>
+        <action
+            android:id="@+id/action_nav_home_to_nav_opportunites"
+            app:destination="@id/nav_opportunites" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_quotes"
+            app:destination="@id/nav_quotes" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_orders"
+            app:destination="@id/nav_orders" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_tasks"
+            app:destination="@id/nav_tasks" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_customers"
+            app:destination="@id/nav_customers" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_projects"
+            app:destination="@id/nav_projects" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_customers"
+        android:name="uk.co.perspective.app.fragments.CustomersFragment"
+        android:label="Customers &amp; Contacts"
+        tools:layout="@layout/fragment_customers" />
+
+    <fragment
+        android:id="@+id/nav_tasks"
+        android:name="uk.co.perspective.app.fragments.TaskFragment"
+        android:label="Tasks"
+        tools:layout="@layout/fragment_task" />
+
+    <fragment
+        android:id="@+id/nav_leads"
+        android:name="uk.co.perspective.app.fragments.LeadsFragment"
+        android:label="Leads"
+        tools:layout="@layout/fragment_opportunities" />
+
+    <fragment
+        android:id="@+id/nav_opportunites"
+        android:name="uk.co.perspective.app.fragments.OpportunitesFragment"
+        android:label="Opportunities"
+        tools:layout="@layout/fragment_opportunities" />
+
+    <fragment
+        android:id="@+id/nav_quotes"
+        android:name="uk.co.perspective.app.fragments.QuotesFragment"
+        android:label="Quotes &amp; Estimates"
+        tools:layout="@layout/fragment_quotes" />
+
+    <fragment
+        android:id="@+id/nav_orders"
+        android:name="uk.co.perspective.app.fragments.OrdersFragment"
+        android:label="Orders"
+        tools:layout="@layout/fragment_orders" />
+
+    <fragment
+        android:id="@+id/nav_projects"
+        android:name="uk.co.perspective.app.fragments.ProjectsFragment"
+        android:label="Projects"
+        tools:layout="@layout/fragment_projects" >
+
+    </fragment>
+
+</navigation>

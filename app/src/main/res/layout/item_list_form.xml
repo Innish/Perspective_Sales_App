@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingBottom="10dp"
+    android:paddingLeft="12dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/actionholder">
+
+    <ImageView
+        android:id="@+id/formicon"
+        android:layout_width="54dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/form_icon"
+        app:tint="#5B5B5B" />
+
+    <TextView
+        android:id="@+id/form_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@+id/formicon"
+        android:layout_toStartOf="@+id/done"
+        android:text="Site Survey"
+        android:layout_marginBottom="0dp"
+        android:textAlignment="viewStart"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/form_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/form_title"
+        android:layout_alignStart="@+id/form_title"
+        android:layout_toStartOf="@+id/done"
+        android:fontFamily="sans-serif-medium"
+        android:text="Description of the form"
+        android:textAlignment="viewStart"
+        android:textColor="#A4A4A4"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/form_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/form_details"
+        android:layout_alignStart="@+id/form_title"
+        android:layout_toStartOf="@+id/done"
+        android:fontFamily="sans-serif-medium"
+        android:text="Pending"
+        android:textAlignment="viewStart"
+        android:textSize="10sp" />
+
+    <CheckBox
+        android:id="@+id/done"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toStartOf="@+id/delete_form_button" />
+
+    <ImageView
+        android:id="@+id/delete_form_button"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/ic_delete" />
+
+</RelativeLayout>

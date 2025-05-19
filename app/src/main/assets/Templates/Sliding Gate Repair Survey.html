@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Site Survey</title>
+    <link href="../Styles/Forms.css" rel="stylesheet" />
+    </head>
+<body>
+    <form id="TheForm">
+
+        <input type="hidden" name="FormName" value="Sliding Gate Repair Survey" />
+        <input type="hidden" name="Created" value="" />
+        <input type="hidden" name="CreatedBy" value="" />
+        <input type="hidden" name="Updated" value="" />
+        <input type="hidden" name="UpdatedBy" value="" />
+        <input type="hidden" name="Template" value="" />
+
+        <table style="width: 70%;">
+            <tbody>
+                <tr>
+                    <td colspan="8" class="texthead" style="text-align: center;">Sliding Gate Repair Survey </td>
+                </tr>
+                <tr>
+                    <td colspan="8">Rules and Guidelines
+                        <br />
+                        <br />
+                        1. A double asterisk means enter further details in the notes section. Examples **Yes in Groundworks Needed or 
+                        any selected item in Replace/Repair Section.<br />
+                        2. All dimensions are viewed from inside unless stated.<br />
+                        3. Any labels highlighted in red means they are mandatory fields and a value must be entered.</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="4">Gate Location</td>
+                    <td style="background-color: #fff7df; font-weight: 700; text-align: left;" colspan="4">Asset Number</td>
+                </tr>
+                <tr>
+                    <td style="background-color: #fff7df;" colspan="4"><input id="DoorLocation" name="DoorLocation" type="text" /></td>
+                    <td style="background-color: #fff7df;" colspan="4"><input id="AssetNumber" name="AssetNumber" type="text" /></td>
+                </tr>
+
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="4">Gate Type</td>
+                    <td style="background-color: #fff7df; font-weight: 700; text-align: left;" colspan="4">Engineer Name</td>
+                </tr>
+
+                <tr>
+                    <td style="background-color: #fff7df; font-weight: 700;" colspan="4">
+                        <select id="GateType" name="GateTye">
+                                <option>Choose Type.....</option>
+                                <option>Automatic</option>
+                                <option>Manual</option>
+                            
+                                                                                 
+                        </select></td>
+                    <td style="background-color: #fff7df;" colspan="4"><input id="EngineerName" name="EngineerName" type="text" /></td>
+                </tr>
+                                <tr>
+                    <td colspan="8" class="texthead">
+                        Sliding Gate Handing</td>
+                </tr>
+
+                <tr>
+                    <td colspan="8"  style="background-color: #fff;">
+                        
+                        <input type="hidden" id="ImageOption_FixingTypeA" name="ImageOption_FixingTypeA" value="" />
+                        
+                       
+                        <table style="background-color: #fff; width: 80%">
+                            
+                            <tr>
+                                <td style="text-align: center">
+                                    <img src="Images/SlidingGateA.png" id="SlidingGateA" class="ImageOption" optionGroup="ImageOption_FixingTypeA" style="height: 100px;"/></td>
+                                <td>
+                                    <img src="Images/SlidingGateB.png" id="SlidingGateB" class="ImageOption" optionGroup="ImageOption_FixingTypeA" style="height: 100px;"/></td>
+                                <td>
+                                    <img src="Images/SlidingGateC.png" id="SlidingGateC" class="ImageOption" optionGroup="ImageOption_FixingTypeA" style="height: 100px;"/></td>                                                           
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="8" class="texthead">
+                        Sliding Gate Dimensions</td>
+                </tr>
+                <tr>
+                    <td style="width: 25%;" colspan="2" class="mandatoryfield">
+                        Structural Width</td>
+                    <td style="width: 25%;" colspan="2" class="mandatoryfield">
+                        &nbsp;Proposed Gate Height</td>
+                    <td style="width: 25%;" colspan="2" style="text-align: left;">
+                        &nbsp;Slide Left</td>
+                    <td style="width: 25%;" colspan="2" style="text-align: left;">
+                        Slide Right</td>
+                </tr>
+
+
+
+                <tr>
+                    <td colspan="2">
+                        <input id="StructuralWidth" name="StructuralWidth" type="text" required /></td>
+                    <td colspan="2">
+                        <input id="GateHeight" name="GateHeight" type="text" required /></td>
+                    <td colspan="2">
+                        <input id="SlideLeft" name="SlideLeft" type="text" placeholder="If double gate, enter left and right dimensions..." /></td>
+                    <td colspan="2">
+                        <input id="SlideRight" name="SlideRight" type="text" placeholder="If double gate, enter left and right dimensions..."/></td>
+                </tr>
+
+
+
+                <tr>
+                    <td colspan="8"  class="texthead">
+                        Additional Sliding Gate Information</td>
+                </tr>
+
+
+
+                <tr>
+                    <td colspan="2">
+                        Gate Colour</td>
+                    <td colspan="2" style="text-align: left;">
+                        Gate Infill Type</td>
+                    <td colspan="2" style="text-align: left;" >
+                        Groundworks Needed</td>
+                    <td colspan="2" style="text-align: left;">
+                        Fencing Needed</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input id="GateColour" name="GateColour" type="text" /></td>
+                    <td colspan="2">
+                        <select id="GateInfillType" name="GateInfillType">                            
+                            <option>Standard (prison mesh)</option>
+                            <option>Palisade</option>
+                            <option>Round Bar</option>
+                             <option>Wood</option>
+                             <option>Solid</option>
+                             <option>Perforated Plate</option>
+                        </select></td>
+                    <td colspan="2">
+                        <select id="Groundworksneeded" name="Groundworksneeded">                            
+                            <option>No</option>
+                            <option>**Yes</option>
+                        </select></td>
+                    <td colspan="2">
+                        <select id="Fencingneeded" name="Fencingneeded">                            
+                            <option>No</option>
+                            <option>**Yes</option>
+                        </select></td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        Number Of Engineers</td>
+                    <td colspan="2" style="text-align: left;">
+                        Labour Time (Hours)</td>
+                    <td colspan="2" style="text-align: left;">
+                        Plant Needed</td>
+                    <td colspan="2">
+                        &nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input id="NumberOfEngineers" name="NumberOfEngineers" type="text" /></td>
+                    <td colspan="2">
+                        <input id="LabourTime" name="LabourTime" type="text" /></td>
+                    <td colspan="2">
+                        <select id="Plantneeded" name="Plantneeded">                            
+                            <option>No</option>
+                            <option>**Yes</option>
+                        </select></td>
+                    <td colspan="2">
+                        &nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        **Sliding Gate Repairs/Replacements/Installation Items </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Induction Loop</td>
+                    <td style="width: 5%;">
+                        <input id="Repair1" name="Repair1" type="checkbox" /></td>
+                    <td style="text-align: left;">
+                        Remotes</td>
+                    <td style="width: 5%;">
+                        <input id="Repair2" name="Repair2" type="checkbox" /></td>
+                    <td style="text-align: left;">
+                        Sensor</td>
+                    <td style="width: 5%;">
+                        <input id="Repair3" name="Repair3" type="checkbox" /></td>
+                    <td style="text-align: left;">
+                        Push Button To Exit </td>
+                    <td style="width: 5%;">
+                        <input id="Repair4" name="Repair4" type="checkbox" /></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Access Control</td>
+                    <td>
+                        <input id="Repair5" name="Repair5" type="checkbox" /></td>
+                    <td style="text-align: left;">
+                        Dual Height Reader Pedestal</td>
+                    <td>
+                        <input id="Repair6" name="Repair6" type="checkbox" /></td>
+                    <td style="text-align: left;">
+                        Car Height Reader Pedestal </td>
+                    <td>
+                        <input id="Repair7" name="Repair7" type="checkbox" /></td>
+                    <td style="text-align: left;">
+                        Lorry Height Reader Pedestal</td>
+                    <td>
+                        <input id="Repair8" name="Repair8" type="checkbox" /></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Swan Neck Style Pedestal</td>
+                    <td>
+                        <input id="Repair9" name="Repair9" type="checkbox" /></td>
+                    <td style="text-align: left;">
+                        ASO Indus Safety Card + Cable Kit</td>
+                    <td>
+                        <input id="Repair10" name="Repair10" type="checkbox" /></td>
+                    <td style="text-align: left;">
+                        Replacement Motor</td>
+                    <td>
+                        <input id="Repair11" name="Repair11" type="checkbox" /></td>
+                    <td style="text-align: left;">
+                        Additional Safety Edges</td>
+                    <td>
+                        <input id="Repair12" name="Repair12" type="checkbox" /></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        Photocells</td>
+                    <td>
+                        <input id="Repair13" name="Repair13" type="checkbox" /></td>
+                    <td style="text-align: left;">
+                        Not Listed </td>
+                    <td>
+                        <input id="Repair14" name="Repair14" type="checkbox" /></td>
+                    <td style="text-align: left;">
+                        &nbsp;</td>
+                    <td style="text-align: left;">
+                        &nbsp;</td>
+                    <td style="text-align: left;">
+                        &nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        <strong>Other Plant Required</strong></td>
+                </tr>
+
+                <tr>
+                    <td colspan="8">
+                        <textarea id="OtherPlant" cols="20" name="OtherPlant" rows="10" placeholder="Describe in detail the plant required, but only if plant pull down menu equals Yes..." ></textarea></td>
+                </tr>
+
+                <tr>
+                    <td colspan="8" class="texthead">
+                        <strong>Notes</strong></td>
+                </tr>
+                <tr>
+                    <td colspan="8">
+                        <textarea id="Notes" cols="20" name="Notes" rows="10" placeholder="Describe in detail any important notes or extras required that are not already listed in the extras section..."></textarea>
+
+                    </td>
+                </tr>
+
+            </table>
+
+    </form>
+</body>
+</html>
